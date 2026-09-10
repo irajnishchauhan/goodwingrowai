@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
-import { Search, AlertCircle } from 'lucide-react';
+import { Search, AlertCircle, CheckCircle, Zap, Code, Layout, Smartphone, PenTool, Cpu } from 'lucide-react';
 
 export default function WebsiteAuditPage() {
   const [url, setUrl] = useState('');
@@ -18,41 +18,51 @@ export default function WebsiteAuditPage() {
     setIsAnalyzing(true);
     setError('');
 
-    // Simulate API call for architecture demonstration
     setTimeout(() => {
       setIsAnalyzing(false);
       setError('Analysis configuration required. External AI web analysis API not connected yet.');
     }, 1500);
   };
 
+  const categories = [
+    { icon: <Zap size={20} color="var(--primary)" />, title: "Performance" },
+    { icon: <Search size={20} color="var(--success)" />, title: "SEO" },
+    { icon: <Layout size={20} color="var(--accent)" />, title: "UX & Conversion" },
+    { icon: <Smartphone size={20} color="var(--warning)" />, title: "Mobile" },
+    { icon: <Code size={20} color="var(--muted)" />, title: "Technical" },
+    { icon: <PenTool size={20} color="var(--secondary)" />, title: "Content" },
+    { icon: <Cpu size={20} color="var(--primary)" />, title: "AI Readiness" }
+  ];
+
   return (
     <div className="fade-in">
       <section style={{ padding: '6rem 0 4rem', backgroundColor: 'var(--surface-muted)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>AI Website Audit</h1>
+          <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', lineHeight: 1.1 }}>Is Your Website Losing Customers?</h1>
           <p style={{ fontSize: '1.25rem', color: 'var(--muted)' }}>
-            Instantly analyze your website's performance, SEO, and conversion potential.
+            Instantly analyze your website across 7 critical growth pillars.
           </p>
         </div>
       </section>
 
       <section style={{ padding: '6rem 0' }}>
-        <div className="container" style={{ maxWidth: '600px' }}>
-          <Card>
-            <CardContent style={{ padding: '2rem' }}>
+        <div className="container" style={{ maxWidth: '800px' }}>
+          <Card style={{ backgroundColor: 'var(--surface)', marginBottom: '4rem' }}>
+            <CardContent style={{ padding: '3rem' }}>
               <form onSubmit={handleAudit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Enter your website URL</label>
+                  <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Enter your website URL to scan</label>
                   <div style={{ display: 'flex', gap: '0.5rem' }}>
                     <Input 
-                      placeholder="https://www.example.com" 
+                      placeholder="https://www.company.com" 
                       value={url}
                       onChange={(e) => setUrl(e.target.value)}
                       required
                       type="url"
+                      style={{ height: '3.5rem', fontSize: '1.125rem' }}
                     />
-                    <Button type="submit" variant="primary" disabled={isAnalyzing}>
-                      {isAnalyzing ? 'Analyzing...' : <><Search size={18} style={{ marginRight: '0.5rem' }} /> Audit</>}
+                    <Button type="submit" variant="primary" size="lg" disabled={isAnalyzing}>
+                      {isAnalyzing ? 'Scanning...' : 'Request Website Audit'}
                     </Button>
                   </div>
                 </div>
@@ -69,6 +79,18 @@ export default function WebsiteAuditPage() {
               </form>
             </CardContent>
           </Card>
+
+          <div>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', textAlign: 'center' }}>What we analyze:</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+              {categories.map((cat, idx) => (
+                <div key={idx} style={{ padding: '1.5rem', backgroundColor: 'var(--surface-muted)', border: '1px solid var(--border)', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  {cat.icon}
+                  <span style={{ fontWeight: 600 }}>{cat.title}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </div>

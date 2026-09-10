@@ -3,18 +3,41 @@ import Link from 'next/link';
 import { Button } from "@/components/ui/Button";
 
 const steps = [
-  { number: "01", title: "DISCOVER", description: "We start by deeply understanding your business, market, and current bottlenecks." },
-  { number: "02", title: "AUDIT", description: "Our team performs a comprehensive AI and marketing audit to identify immediate growth opportunities." },
-  { number: "03", title: "STRATEGIZE", description: "We create a custom growth roadmap detailing the systems, campaigns, and automation required." },
-  { number: "04", title: "BUILD", description: "We implement the marketing infrastructure, technology stack, and AI systems." },
-  { number: "05", title: "AUTOMATE", description: "We deploy AI agents and workflow automation to reduce repetitive work and accelerate lead processing." },
-  { number: "06", title: "OPTIMIZE", description: "We continuously analyze data, run A/B tests, and refine the systems for maximum ROI." },
-  { number: "07", title: "GROW", description: "Once the engine is running efficiently, we scale what works to drive exponential growth." }
+  {
+    num: "01",
+    title: "Discover",
+    description: "Understand the business, customer and growth bottlenecks.",
+  },
+  {
+    num: "02",
+    title: "Strategize",
+    description: "Build a data-backed growth roadmap.",
+  },
+  {
+    num: "03",
+    title: "Build",
+    description: "Deploy campaigns, websites, automation and AI systems.",
+  },
+  {
+    num: "04",
+    title: "Launch",
+    description: "Put the growth engine into market.",
+  },
+  {
+    num: "05",
+    title: "Measure",
+    description: "Track leads, conversions, CAC and revenue.",
+  },
+  {
+    num: "06",
+    title: "Optimize",
+    description: "Continuously improve performance using data and AI.",
+  }
 ];
 
 export const metadata = {
   title: "How We Work | Goodwin Grow AI",
-  description: "Our 7-step process to building AI-powered growth systems.",
+  description: "From strategy to scale. See our proven 6-step process for building predictable AI growth engines."
 };
 
 export default function ProcessPage() {
@@ -22,31 +45,52 @@ export default function ProcessPage() {
     <div className="fade-in">
       <section style={{ padding: '6rem 0 4rem', backgroundColor: 'var(--surface-muted)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>How We Work</h1>
+          <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>From Strategy To Scale.</h1>
           <p style={{ fontSize: '1.25rem', color: 'var(--muted)' }}>
-            A systematic approach to predictable revenue growth.
+            We don't do random acts of marketing. We execute a disciplined, 6-step engineering process to build your growth system.
           </p>
         </div>
       </section>
 
       <section style={{ padding: '6rem 0' }}>
         <div className="container" style={{ maxWidth: '800px' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+          <div style={{ position: 'relative' }}>
+            {/* Timeline Line */}
+            <div style={{ position: 'absolute', left: '24px', top: '0', bottom: '0', width: '2px', backgroundColor: 'var(--border)', zIndex: 0 }}></div>
+
             {steps.map((step, idx) => (
-              <div key={idx} style={{ display: 'flex', gap: '2rem', padding: '2rem', backgroundColor: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '1rem' }}>
-                <div style={{ fontSize: '3rem', fontWeight: 800, color: 'var(--surface-muted)', lineHeight: 1 }}>
-                  {step.number}
+              <div key={idx} style={{ display: 'flex', gap: '2rem', marginBottom: idx !== steps.length - 1 ? '4rem' : '0', position: 'relative', zIndex: 1 }}>
+                
+                {/* Number Circle */}
+                <div style={{ 
+                  width: '50px', 
+                  height: '50px', 
+                  borderRadius: '50%', 
+                  backgroundColor: 'var(--surface)', 
+                  border: '2px solid var(--primary)', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  fontWeight: 700,
+                  fontSize: '1.25rem',
+                  color: 'var(--primary)',
+                  flexShrink: 0
+                }}>
+                  {step.num}
                 </div>
-                <div>
-                  <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--foreground)' }}>{step.title}</h3>
-                  <p style={{ color: 'var(--muted)', lineHeight: 1.6 }}>{step.description}</p>
+
+                {/* Content */}
+                <div style={{ paddingTop: '0.5rem', paddingBottom: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.5rem', marginBottom: '0.75rem', color: 'var(--foreground)' }}>Step {step.num} — {step.title}</h3>
+                  <p style={{ color: 'var(--muted)', fontSize: '1.125rem', lineHeight: 1.6 }}>{step.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div style={{ marginTop: '5rem', textAlign: 'center' }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Ready to start step 01?</h3>
+          <div style={{ marginTop: '6rem', textAlign: 'center', padding: '3rem', backgroundColor: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '1rem' }}>
+            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Ready for Step 01?</h2>
+            <p style={{ color: 'var(--muted)', marginBottom: '2rem' }}>Book your free growth audit to start the discovery process today.</p>
             <Link href="/growth-audit">
               <Button size="lg" variant="primary">Book a Free Growth Audit</Button>
             </Link>
