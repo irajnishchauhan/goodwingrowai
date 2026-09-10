@@ -8,38 +8,37 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
-        <div className={styles.brand}>
-          <Link href="/" className={styles.logo}>
-            <GoodwinLogo variant="horizontal" theme="dark" size="md" />
-          </Link>
-          <p className={styles.description}>
-            AI-powered marketing and growth systems for ambitious businesses.
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div className={styles.logo}>
+            <GoodwinLogo variant="horizontal" theme="dark" />
+          </div>
+          <p style={{ color: 'var(--muted)', fontSize: '0.875rem', lineHeight: 1.6, maxWidth: '300px' }}>
+            India-first AI-powered growth partner. We combine performance marketing, automation, data, and AI to generate measurable business growth.
           </p>
         </div>
 
-        <div className={styles.linksColumn}>
-          <h4 className={styles.columnTitle}>Company</h4>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <h3 style={{ fontSize: '1rem', color: 'var(--foreground)' }}>Contact Us</h3>
+          <a href="mailto:goodwingrow@gmail.com" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>goodwingrow@gmail.com</a>
+          <a href="tel:+919589531380" style={{ color: 'var(--muted)', fontSize: '0.875rem', textDecoration: 'none' }}>+91 95895 31380</a>
+          <a href="https://wa.me/919589531380" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>Chat on WhatsApp</a>
+          <span style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>Mon-Fri, 9:00 AM - 6:00 PM IST</span>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <h3 style={{ fontSize: '1rem', color: 'var(--foreground)' }}>Services</h3>
+          <Link href="/services" className={styles.link}>AI Marketing</Link>
+          <Link href="/services" className={styles.link}>Performance Marketing</Link>
+          <Link href="/services" className={styles.link}>SEO & Content</Link>
+          <Link href="/services" className={styles.link}>AI Automation</Link>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <h3 style={{ fontSize: '1rem', color: 'var(--foreground)' }}>Company</h3>
           <Link href="/about" className={styles.link}>About Us</Link>
-          <Link href="/process" className={styles.link}>How We Work</Link>
+          <Link href="/case-studies" className={styles.link}>Case Studies</Link>
           <Link href="/pricing" className={styles.link}>Pricing</Link>
           <Link href="/contact" className={styles.link}>Contact</Link>
-        </div>
-
-        <div className={styles.linksColumn}>
-          <h4 className={styles.columnTitle}>Services</h4>
-          <Link href="/services/ai-marketing" className={styles.link}>AI Marketing</Link>
-          <Link href="/services/performance-marketing" className={styles.link}>Performance Marketing</Link>
-          <Link href="/services/seo-content" className={styles.link}>SEO & Content</Link>
-          <Link href="/services/lead-generation" className={styles.link}>Lead Generation</Link>
-          <Link href="/services/ai-automation" className={styles.link}>AI Automation</Link>
-        </div>
-
-        <div className={styles.linksColumn}>
-          <h4 className={styles.columnTitle}>Industries</h4>
-          <Link href="/industries#healthcare" className={styles.link}>Healthcare</Link>
-          <Link href="/industries#ecommerce" className={styles.link}>D2C & E-commerce</Link>
-          <Link href="/industries#b2b" className={styles.link}>Professional Services</Link>
-          <Link href="/industries" className={styles.link}>View All</Link>
         </div>
 
         <div className={styles.linksColumn}>

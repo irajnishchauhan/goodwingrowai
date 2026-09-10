@@ -4,6 +4,7 @@ import { ProblemSection } from "@/components/marketing/ProblemSection";
 import { AiCoreSection } from "@/components/marketing/AiCoreSection";
 import { GrowthEngineSection } from "@/components/marketing/GrowthEngineSection";
 import { ServicesOverview } from "@/components/marketing/ServicesOverview";
+import { Testimonials } from "@/components/marketing/Testimonials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ProblemSection />
       <AiCoreSection />
       <GrowthEngineSection />
+      <Testimonials />
       <ServicesOverview />
     </div>
   );

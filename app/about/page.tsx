@@ -67,6 +67,53 @@ export default function AboutPage() {
             </div>
           </div>
 
+          <div>
+            <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--accent)' }}>Why Goodwin Grow AI?</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+              <div style={{ padding: '2rem', backgroundColor: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '0.75rem' }}>
+                <strong style={{ display: 'block', fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--foreground)' }}>AI-Native</strong>
+                <p style={{ color: 'var(--muted)', fontSize: '0.875rem', lineHeight: 1.6 }}>AI is integrated into our workflow from day one, not bolted on as a marketing buzzword.</p>
+              </div>
+              <div style={{ padding: '2rem', backgroundColor: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '0.75rem' }}>
+                <strong style={{ display: 'block', fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--foreground)' }}>Data-Driven</strong>
+                <p style={{ color: 'var(--muted)', fontSize: '0.875rem', lineHeight: 1.6 }}>Decisions are based on measurable performance, predictive analytics, and conversion math.</p>
+              </div>
+              <div style={{ padding: '2rem', backgroundColor: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '0.75rem' }}>
+                <strong style={{ display: 'block', fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--foreground)' }}>Full-Funnel</strong>
+                <p style={{ color: 'var(--muted)', fontSize: '0.875rem', lineHeight: 1.6 }}>We optimize the entire journey: Traffic → Lead → Conversion → Retention.</p>
+              </div>
+              <div style={{ padding: '2rem', backgroundColor: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '0.75rem' }}>
+                <strong style={{ display: 'block', fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--foreground)' }}>Automation-First</strong>
+                <p style={{ color: 'var(--muted)', fontSize: '0.875rem', lineHeight: 1.6 }}>We reduce repetitive marketing and sales work so your team can focus on closing deals.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--accent)' }}>Meet the Team</h2>
+            <p style={{ color: 'var(--muted)', fontSize: '1.125rem', marginBottom: '3rem' }}>
+              We are a collective of data scientists, marketing strategists, and automation engineers based in India, building global systems.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
+              {/* Placeholders for actual team members */}
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ width: '120px', height: '120px', backgroundColor: 'var(--surface-muted)', borderRadius: '50%', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--muted)', border: '1px solid var(--border)' }}>Photo</div>
+                <strong style={{ display: 'block', fontSize: '1.125rem', color: 'var(--foreground)' }}>[Founder Name]</strong>
+                <span style={{ fontSize: '0.875rem', color: 'var(--primary)' }}>Founder & CEO</span>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ width: '120px', height: '120px', backgroundColor: 'var(--surface-muted)', borderRadius: '50%', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--muted)', border: '1px solid var(--border)' }}>Photo</div>
+                <strong style={{ display: 'block', fontSize: '1.125rem', color: 'var(--foreground)' }}>[Name]</strong>
+                <span style={{ fontSize: '0.875rem', color: 'var(--primary)' }}>Head of AI & Automation</span>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ width: '120px', height: '120px', backgroundColor: 'var(--surface-muted)', borderRadius: '50%', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--muted)', border: '1px solid var(--border)' }}>Photo</div>
+                <strong style={{ display: 'block', fontSize: '1.125rem', color: 'var(--foreground)' }}>[Name]</strong>
+                <span style={{ fontSize: '0.875rem', color: 'var(--primary)' }}>Director of Growth</span>
+              </div>
+            </div>
+          </div>
+
           <div style={{ padding: '3rem', backgroundColor: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '1rem', textAlign: 'center' }}>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--foreground)' }}>Ready to build your system?</h3>
             <p style={{ color: 'var(--muted)', marginBottom: '2rem' }}>Stop guessing and start engineering your growth.</p>
