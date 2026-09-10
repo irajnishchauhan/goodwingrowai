@@ -1,0 +1,11 @@
+<svg width="320" height="64" viewBox="0 0 320 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(0, 0)">
+      <path d="M 32 8 C 18.7 8 8 18.7 8 32 C 8 45.3 18.7 56 32 56 C 41 56 48.5 51 52.5 44" stroke="#05070B" stroke-width="7" stroke-linecap="round" fill="none" />
+      <path d="M 28 32 L 42 32 L 56 18" stroke="#7C5CFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <path d="M 44 18 L 56 18 L 56 30" stroke="#7C5CFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <circle cx="24" cy="32" r="3.5" fill="#05070B" />
+    </g>
+  
+        <text x="88" y="42" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="36" fill="#05070B" letter-spacing="-0.02em">GOODWIN</text>
+        <text x="268" y="42" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="36" fill="#9CA3AF" letter-spacing="0.05em">GROW <tspan fill="#7C5CFF" font-weight="700">AI</tspan></text>
+      </svg>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { GoodwinLogo } from '../ui/GoodwinLogo';
 import styles from './Footer.module.css';
 import { siteConfig } from '@/lib/config';
 
@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className={`container ${styles.grid}`}>
         <div className={styles.brand}>
           <Link href="/" className={styles.logo}>
-            <Image src="/logo.jpg" alt="Goodwin Grow AI" width={200} height={40} className={styles.logoImage} />
+            <GoodwinLogo variant="horizontal" theme="dark" size="md" />
           </Link>
           <p className={styles.description}>
             AI-powered marketing and growth systems for ambitious businesses.

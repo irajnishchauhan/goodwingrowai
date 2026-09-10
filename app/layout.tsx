@@ -60,6 +60,14 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -71,7 +79,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main style={{ minHeight: '100vh' }}>
+        <main style={{ minHeight: '100vh', flexGrow: 1, flexShrink: 0 }}>
           {children}
         </main>
         <Footer />

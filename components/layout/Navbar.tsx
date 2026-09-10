@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '../ui/Button';
+import { GoodwinLogo } from '../ui/GoodwinLogo';
 import styles from './Navbar.module.css';
 import { Menu, X } from 'lucide-react';
 
@@ -33,8 +33,7 @@ export const Navbar = () => {
     <header className={styles.header}>
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
-          {/* Logo configured per master prompt instructions */}
-          <Image src="/logo.jpg" alt="Goodwin Grow AI" width={200} height={40} className={styles.logoImage} priority />
+          <GoodwinLogo variant="horizontal" theme="dark" size="md" className="logo-reveal" />
         </Link>
 
         {/* Desktop Navigation */}

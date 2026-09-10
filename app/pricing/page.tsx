@@ -75,14 +75,14 @@ export default function PricingPage() {
                 backgroundColor: 'var(--surface)',
                 border: pkg.highlight ? '2px solid var(--primary)' : '1px solid var(--border)',
                 transform: pkg.highlight ? 'scale(1.02)' : 'none',
-                position: 'relative'
+                overflow: 'hidden'
               }}>
                 {pkg.highlight && (
-                  <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'var(--primary)', color: 'white', padding: '0.25rem 1rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em' }}>
+                  <div style={{ backgroundColor: 'var(--primary)', color: 'white', padding: '0.5rem 1rem', textAlign: 'center', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em' }}>
                     MOST POPULAR
                   </div>
                 )}
-                <CardHeader style={{ padding: '2.5rem 2rem 1.5rem' }}>
+                <CardHeader style={{ padding: pkg.highlight ? '1.5rem 2rem' : '2.5rem 2rem 1.5rem' }}>
                   <CardTitle style={{ fontSize: '1.25rem', color: 'var(--muted)', letterSpacing: '0.1em' }}>{pkg.name}</CardTitle>
                   <div style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--foreground)', marginTop: '0.5rem', marginBottom: '1rem' }}>
                     {pkg.price}
