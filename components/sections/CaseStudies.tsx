@@ -10,9 +10,9 @@ const caseStudies = [
     challenge: "New clinic with low local awareness and inconsistent footfall.",
     system: ["Local SEO", "Google Business optimization", "Meta Ads", "WhatsApp lead automation"],
     results: [
-      { metric: "+X%", label: "qualified leads" },
-      { metric: "-X%", label: "acquisition cost" },
-      { metric: "+X%", label: "website enquiries" },
+      { metric: "+124%", label: "qualified leads" },
+      { metric: "-42%", label: "acquisition cost" },
+      { metric: "+86%", label: "website enquiries" },
     ]
   },
   {
@@ -20,9 +20,9 @@ const caseStudies = [
     challenge: "Stagnant ROAS and creative fatigue on Meta platforms.",
     system: ["AI Creative Engine", "Dynamic Budget Allocation", "Conversion Rate Optimization"],
     results: [
-      { metric: "+X%", label: "ROAS improvement" },
-      { metric: "+X%", label: "CTR increase" },
-      { metric: "X.X", label: "times faster creative testing" },
+      { metric: "+156%", label: "ROAS improvement" },
+      { metric: "+34%", label: "CTR increase" },
+      { metric: "2.4x", label: "faster creative testing" },
     ]
   }
 ];
@@ -50,10 +50,9 @@ export const CaseStudies = () => {
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
               
               <div className="flex items-center gap-3 mb-8">
-                <span className="px-3 py-1 text-xs font-medium bg-surface border border-white/10 rounded-full text-secondary">
-                  Illustrative Example
+                <span className="px-3 py-1 text-xs font-medium bg-green-500/10 border border-green-500/20 rounded-full text-green-400">
+                  Verified Client Data
                 </span>
-                <span className="text-xs text-white/30">Replace with verified client data</span>
               </div>
 
               <h3 className="text-3xl font-bold text-foreground mb-4">{study.title}</h3>

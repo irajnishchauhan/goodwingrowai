@@ -8,9 +8,20 @@ import { GlowButton } from "@/components/ui/GlowButton";
 export const GrowthAudit = () => {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
+    
+    const formData = new FormData(e.currentTarget);
+    const website = formData.get('website');
+    const industry = formData.get('industry');
+    const spend = formData.get('spend');
+    const goal = formData.get('goal');
+    
+    const text = `Hi Goodwin Grow AI Team,%0A%0AI'd like a custom growth roadmap.%0A*Website:* ${website}%0A*Industry:* ${industry}%0A*Monthly Spend:* ${spend}%0A*Primary Goal:* ${goal}`;
+    const url = `https://wa.me/919589531380?text=${text}`;
+    
+    window.open(url, '_blank');
   };
 
   return (
@@ -63,12 +74,12 @@ export const GrowthAudit = () => {
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
                   <label className="text-xs uppercase tracking-wider text-secondary font-medium">Website</label>
-                  <input required type="url" className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" placeholder="https://example.com" />
+                  <input required name="website" type="url" className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" placeholder="https://example.com" />
                 </div>
                 
                 <div className="flex flex-col gap-2">
                   <label className="text-xs uppercase tracking-wider text-secondary font-medium">Industry</label>
-                  <select required className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors appearance-none">
+                  <select required name="industry" className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors appearance-none">
                     <option value="">Select Industry</option>
                     <option value="healthcare">Healthcare</option>
                     <option value="realestate">Real Estate</option>
@@ -84,7 +95,7 @@ export const GrowthAudit = () => {
 
                 <div className="flex flex-col gap-2">
                   <label className="text-xs uppercase tracking-wider text-secondary font-medium">Monthly Marketing Spend</label>
-                  <select required className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors appearance-none">
+                  <select required name="spend" className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors appearance-none">
                     <option value="">Select Range</option>
                     <option value="under5k">Under $5,000</option>
                     <option value="5k_20k">$5,000 - $20,000</option>
@@ -95,7 +106,7 @@ export const GrowthAudit = () => {
 
                 <div className="flex flex-col gap-2">
                   <label className="text-xs uppercase tracking-wider text-secondary font-medium">Primary Goal</label>
-                  <textarea required rows={3} className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors resize-none" placeholder="e.g. Decrease CAC, scale lead volume, automate workflows..."></textarea>
+                  <textarea required name="goal" rows={3} className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors resize-none" placeholder="e.g. Decrease CAC, scale lead volume, automate workflows..."></textarea>
                 </div>
                 
                 <GlowButton variant="primary" type="submit" className="w-full mt-4 py-4">

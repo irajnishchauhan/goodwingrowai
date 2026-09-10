@@ -44,17 +44,19 @@ export const Navbar = () => {
       >
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
           
-          <Link href="/" className="relative z-50 flex items-center gap-2 group">
-            <GoodwinLogo variant="horizontal" theme="dark" size="md" />
+          <div className="flex items-center gap-6">
+            <Link href="/" className="relative z-50 flex items-center group">
+              <GoodwinLogo variant="horizontal" theme="dark" size="md" className="mr-2" />
+            </Link>
             {/* AI Status Indicator */}
-            <div className="hidden md:flex items-center gap-2 ml-4 px-3 py-1 rounded-full bg-surface border border-white/10 text-xs font-medium">
+            <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-white/10 text-xs font-medium whitespace-nowrap">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
               </span>
               AI Growth Engine Online
             </div>
-          </Link>
+          </div>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
