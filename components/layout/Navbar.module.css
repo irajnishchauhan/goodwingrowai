@@ -1,0 +1,66 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header {
+    background-color: rgba(10, 10, 10, 0.8);
+  }
+}
+
+.navContainer {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--foreground);
+}
+
+.logoIcon {
+  color: var(--accent);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--foreground);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
