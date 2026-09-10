@@ -12,16 +12,16 @@ export default function CaseStudiesPage() {
   // Creating a placeholder layout that is clearly marked
   return (
     <div className="fade-in">
-      <section style={{ padding: '6rem 0 4rem', backgroundColor: 'var(--surface-muted)' }}>
-        <div className="container" style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Client Results</h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--muted)' }}>
+      <section className="section-padding-large" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container section-header" style={{ marginBottom: 0 }}>
+          <h1 className="section-title-large">Client Results</h1>
+          <p className="section-subtitle">
             See how we've helped businesses transform their marketing with artificial intelligence.
           </p>
         </div>
       </section>
 
-      <section style={{ padding: '6rem 0' }}>
+      <section className="section-padding">
         <div className="container">
           
           {/* Sample Growth Framework (No fake data) */}

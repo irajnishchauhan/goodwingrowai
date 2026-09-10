@@ -63,16 +63,16 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <div className="fade-in">
-      <section style={{ padding: '6rem 0 4rem', backgroundColor: 'var(--surface-muted)' }}>
-        <div className="container" style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Growth Systems, Not Just Campaigns.</h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--muted)' }}>
+      <section className="section-padding-large" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container section-header" style={{ marginBottom: 0 }}>
+          <h1 className="section-title-large">Growth Systems, Not Just Campaigns.</h1>
+          <p className="section-subtitle">
             We combine artificial intelligence with proven marketing strategies to build scalable revenue engines for your business.
           </p>
         </div>
       </section>
 
-      <section style={{ padding: '6rem 0' }}>
+      <section className="section-padding">
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             {servicesList.map((service, idx) => (

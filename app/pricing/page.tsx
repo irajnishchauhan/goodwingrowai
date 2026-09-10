@@ -55,16 +55,16 @@ export const metadata = {
 export default function PricingPage() {
   return (
     <div className="fade-in">
-      <section style={{ padding: '6rem 0 4rem', backgroundColor: 'var(--surface-muted)' }}>
-        <div className="container" style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Growth Engineered for Your Stage.</h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--muted)' }}>
+      <section className="section-padding-large" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container section-header" style={{ marginBottom: 0 }}>
+          <h1 className="section-title-large">Growth Engineered for Your Stage.</h1>
+          <p className="section-subtitle">
             We don't do cookie-cutter subscriptions. We build service packages tailored to your specific acquisition and automation needs.
           </p>
         </div>
       </section>
 
-      <section style={{ padding: '6rem 0' }}>
+      <section className="section-padding">
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'stretch' }}>
             {packages.map((pkg, idx) => (

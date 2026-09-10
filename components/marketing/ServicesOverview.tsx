@@ -58,11 +58,11 @@ const services = [
 
 export const ServicesOverview = () => {
   return (
-    <section className={styles.section} style={{ padding: '6rem 0', backgroundColor: 'var(--surface-muted)' }}>
+    <section className={`${styles.section} section-padding`} style={{ backgroundColor: 'var(--surface-muted)' }}>
       <div className={`container ${styles.container}`}>
-        <div className={styles.header} style={{ marginBottom: '4rem', textAlign: 'center' }}>
-          <h2 className={styles.title} style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Growth Systems, Not Just Campaigns.</h2>
-          <p className={styles.description} style={{ color: 'var(--muted)', maxWidth: '600px', margin: '0 auto' }}>
+        <div className={`section-header ${styles.header}`} style={{ marginBottom: '4rem' }}>
+          <h2 className={`section-title ${styles.title}`}>Growth Systems, Not Just Campaigns.</h2>
+          <p className={`section-subtitle ${styles.description}`}>
             We combine artificial intelligence with proven marketing strategies to build scalable revenue engines for your business.
           </p>
         </div>

@@ -21,12 +21,12 @@ export default function GrowthAuditPage() {
 
   return (
     <div className="fade-in">
-      <section style={{ padding: '6rem 0', backgroundColor: 'var(--surface-muted)' }}>
+      <section className="section-padding" style={{ backgroundColor: 'var(--surface-muted)' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem', alignItems: 'center' }}>
           
           <div style={{ maxWidth: '600px' }}>
-            <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', lineHeight: 1.1 }}>Find What's Holding Your Growth Back.</h1>
-            <p style={{ fontSize: '1.25rem', color: 'var(--muted)', marginBottom: '2rem' }}>
+            <h1 className="section-title-large">Find What's Holding Your Growth Back.</h1>
+            <p className="section-subtitle" style={{ marginBottom: '2rem' }}>
               Get a practical assessment of your marketing, website, acquisition and automation opportunities.
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '1.125rem' }}>

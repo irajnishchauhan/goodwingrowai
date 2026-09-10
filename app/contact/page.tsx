@@ -22,11 +22,11 @@ export default function ContactPage() {
 
   return (
     <div className="fade-in">
-      <section style={{ padding: '6rem 0', backgroundColor: 'var(--background)' }}>
+      <section className="section-padding" style={{ backgroundColor: 'var(--background)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem' }}>
-            <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Let's Build Your Growth Engine.</h1>
-            <p style={{ fontSize: '1.25rem', color: 'var(--muted)' }}>
+          <div className="section-header">
+            <h1 className="section-title-large">Let's Build Your Growth Engine.</h1>
+            <p className="section-subtitle">
               Whether you need to scale your lead generation, automate your sales, or overhaul your marketing strategy, we're here to help.
             </p>
           </div>

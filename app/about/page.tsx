@@ -10,16 +10,16 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="fade-in">
-      <section style={{ padding: '8rem 0 6rem', backgroundColor: 'var(--surface-muted)', textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', lineHeight: 1.1 }}>
+      <section className="section-padding-large" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container section-header" style={{ marginBottom: 0 }}>
+          <h1 className="section-title-large">
             We don't believe businesses need more marketing noise. <br/>
             <span style={{ color: 'var(--primary)' }}>They need better growth systems.</span>
           </h1>
         </div>
       </section>
 
-      <section style={{ padding: '6rem 0' }}>
+      <section className="section-padding">
         <div className="container" style={{ maxWidth: '800px', display: 'flex', flexDirection: 'column', gap: '5rem' }}>
           
           <div>

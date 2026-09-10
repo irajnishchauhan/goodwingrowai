@@ -36,16 +36,16 @@ export default function WebsiteAuditPage() {
 
   return (
     <div className="fade-in">
-      <section style={{ padding: '6rem 0 4rem', backgroundColor: 'var(--surface-muted)' }}>
-        <div className="container" style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', lineHeight: 1.1 }}>Is Your Website Losing Customers?</h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--muted)' }}>
+      <section className="section-padding-large" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container section-header" style={{ marginBottom: 0 }}>
+          <h1 className="section-title-large">Is Your Website Losing Customers?</h1>
+          <p className="section-subtitle">
             Instantly analyze your website across 7 critical growth pillars.
           </p>
         </div>
       </section>
 
-      <section style={{ padding: '6rem 0' }}>
+      <section className="section-padding">
         <div className="container" style={{ maxWidth: '800px' }}>
           <Card style={{ backgroundColor: 'var(--surface)', marginBottom: '4rem' }}>
             <CardContent style={{ padding: '3rem' }}>

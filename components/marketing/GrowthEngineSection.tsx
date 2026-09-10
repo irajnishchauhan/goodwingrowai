@@ -14,12 +14,14 @@ export const GrowthEngineSection = () => {
   ];
 
   return (
-    <section style={{ padding: '6rem 0', backgroundColor: 'var(--background)', overflow: 'hidden' }}>
-      <div className="container" style={{ textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>One Growth Engine.<br/>Every Marketing Function Connected.</h2>
-        <p style={{ fontSize: '1.125rem', color: 'var(--muted)', maxWidth: '600px', margin: '0 auto 4rem' }}>
-          We don't just "run ads". We build a closed-loop system where data from your revenue feeds back into your strategy automatically.
-        </p>
+    <section className="section-padding" style={{ backgroundColor: 'var(--background)', overflow: 'hidden' }}>
+      <div className="container">
+        <div className="section-header">
+          <h2 className="section-title">One Growth Engine.<br/>Every Marketing Function Connected.</h2>
+          <p className="section-subtitle">
+            We don't just "run ads". We build a closed-loop system where data from your revenue feeds back into your strategy automatically.
+          </p>
+        </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', position: 'relative' }}>
           {steps.map((step, idx) => (

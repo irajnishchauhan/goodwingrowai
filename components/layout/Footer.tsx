@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className={`container ${styles.grid}`}>
         <div className={styles.brand}>
           <Link href="/" className={styles.logo}>
-            <Image src="/logo.png" alt="Goodwin Grow AI" width={200} height={40} className={styles.logoImage} />
+            <Image src="/logo.jpg" alt="Goodwin Grow AI" width={200} height={40} className={styles.logoImage} />
           </Link>
           <p className={styles.description}>
             AI-powered marketing and growth systems for ambitious businesses.

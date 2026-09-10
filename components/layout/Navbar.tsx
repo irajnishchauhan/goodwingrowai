@@ -34,7 +34,7 @@ export const Navbar = () => {
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
           {/* Logo configured per master prompt instructions */}
-          <Image src="/logo.png" alt="Goodwin Grow AI" width={200} height={40} className={styles.logoImage} priority />
+          <Image src="/logo.jpg" alt="Goodwin Grow AI" width={200} height={40} className={styles.logoImage} priority />
         </Link>
 
         {/* Desktop Navigation */}

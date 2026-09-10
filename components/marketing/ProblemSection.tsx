@@ -13,11 +13,11 @@ const problems = [
 
 export const ProblemSection = () => {
   return (
-    <section style={{ padding: '6rem 0', backgroundColor: 'var(--background)' }}>
+    <section className="section-padding" style={{ backgroundColor: 'var(--background)' }}>
       <div className="container">
-        <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Your Marketing Shouldn't Feel Like Guesswork.</h2>
-          <p style={{ fontSize: '1.125rem', color: 'var(--muted)' }}>
+        <div className="section-header">
+          <h2 className="section-title">Your Marketing Shouldn't Feel Like Guesswork.</h2>
+          <p className="section-subtitle">
             Most businesses struggle because their acquisition efforts are disconnected.
           </p>
         </div>

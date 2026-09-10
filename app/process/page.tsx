@@ -43,16 +43,16 @@ export const metadata = {
 export default function ProcessPage() {
   return (
     <div className="fade-in">
-      <section style={{ padding: '6rem 0 4rem', backgroundColor: 'var(--surface-muted)' }}>
-        <div className="container" style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>From Strategy To Scale.</h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--muted)' }}>
+      <section className="section-padding-large" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container section-header" style={{ marginBottom: 0 }}>
+          <h1 className="section-title-large">From Strategy To Scale.</h1>
+          <p className="section-subtitle">
             We don't do random acts of marketing. We execute a disciplined, 6-step engineering process to build your growth system.
           </p>
         </div>
       </section>
 
-      <section style={{ padding: '6rem 0' }}>
+      <section className="section-padding">
         <div className="container" style={{ maxWidth: '800px' }}>
           <div style={{ position: 'relative' }}>
             {/* Timeline Line */}

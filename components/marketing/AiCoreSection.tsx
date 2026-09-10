@@ -3,12 +3,12 @@ import { Bot, LineChart, Cpu, Workflow, Target, Search } from 'lucide-react';
 
 export const AiCoreSection = () => {
   return (
-    <section style={{ padding: '6rem 0', backgroundColor: 'var(--surface)' }}>
-      <div className="container" style={{ textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>AI Is Not The Service.</h2>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', color: 'var(--primary)' }}>AI Is The Engine Behind The Service.</h2>
+    <section className="section-padding" style={{ backgroundColor: 'var(--surface)' }}>
+      <div className="container section-header">
+        <h2 className="section-title" style={{ marginBottom: '1rem' }}>AI Is Not The Service.</h2>
+        <h2 className="section-title" style={{ color: 'var(--primary)' }}>AI Is The Engine Behind The Service.</h2>
         
-        <p style={{ fontSize: '1.125rem', color: 'var(--muted)', maxWidth: '800px', margin: '0 auto 4rem' }}>
+        <p className="section-subtitle">
           We don't just sell "AI chatbots". We integrate artificial intelligence deeply into every marketing function to give you an unfair advantage.
         </p>
 

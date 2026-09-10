@@ -71,7 +71,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main style={{ flex: 1, minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <main style={{ minHeight: '100vh' }}>
           {children}
         </main>
         <Footer />
