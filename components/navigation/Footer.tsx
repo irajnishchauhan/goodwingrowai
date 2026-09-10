@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
+import { GoodwinLogo } from "@/components/ui/GoodwinLogo";
 
 const footerLinks = {
   solutions: [
@@ -38,13 +39,26 @@ export const Footer = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 mb-16">
           <div className="col-span-2 lg:col-span-2">
-            <Link href="/" className="flex flex-col text-2xl font-bold leading-tight tracking-tighter mb-4">
-              <span>GOODWIN</span>
-              <span className="text-secondary">GROW AI</span>
+            <Link href="/" className="mb-6 inline-block">
+              <GoodwinLogo variant="stacked" theme="dark" size="lg" />
             </Link>
             <p className="text-secondary mb-6 max-w-sm">
               AI-powered growth for ambitious businesses.
             </p>
+            <div className="flex flex-col gap-3 text-sm text-secondary">
+              <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-accent transition-colors flex items-center gap-2">
+                <span className="w-6 h-6 flex items-center justify-center bg-white/5 rounded-md text-base">📧</span>
+                {siteConfig.contact.email}
+              </a>
+              <a href={`tel:${siteConfig.contact.phone}`} className="hover:text-accent transition-colors flex items-center gap-2">
+                <span className="w-6 h-6 flex items-center justify-center bg-white/5 rounded-md text-base">📞</span>
+                {siteConfig.contact.phone}
+              </a>
+              <a href={siteConfig.contact.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors flex items-center gap-2">
+                <span className="w-6 h-6 flex items-center justify-center bg-white/5 rounded-md text-base">💬</span>
+                WhatsApp Us
+              </a>
+            </div>
           </div>
           
           <div>
@@ -105,14 +119,14 @@ export const Footer = () => {
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href={siteConfig.socials.linkedin} className="text-secondary hover:text-foreground transition-colors">
+            <Link href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-foreground transition-colors">
               LinkedIn
             </Link>
-            <Link href={siteConfig.socials.instagram} className="text-secondary hover:text-foreground transition-colors">
-              Instagram
+            <Link href={siteConfig.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-foreground transition-colors">
+              X (Twitter)
             </Link>
-            <Link href="#" className="text-secondary hover:text-foreground transition-colors">
-              YouTube
+            <Link href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-foreground transition-colors">
+              Instagram
             </Link>
           </div>
         </div>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { GlowButton } from "@/components/ui/GlowButton";
+import { GoodwinLogo } from "@/components/ui/GoodwinLogo";
 
 const navLinks = [
   { name: "Solutions", href: "#solutions" },
@@ -44,10 +45,7 @@ export const Navbar = () => {
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
           
           <Link href="/" className="relative z-50 flex items-center gap-2 group">
-            <div className="flex flex-col text-lg font-bold leading-tight tracking-tighter">
-              <span>GOODWIN</span>
-              <span className="text-secondary">GROW AI</span>
-            </div>
+            <GoodwinLogo variant="horizontal" theme="dark" size="md" />
             {/* AI Status Indicator */}
             <div className="hidden md:flex items-center gap-2 ml-4 px-3 py-1 rounded-full bg-surface border border-white/10 text-xs font-medium">
               <span className="relative flex h-2 w-2">
@@ -73,9 +71,6 @@ export const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Link href="#login" className="text-sm font-medium text-secondary hover:text-foreground transition-colors">
-              Log In
-            </Link>
             <Link href="#audit">
               <GlowButton variant="primary" className="py-2.5 px-6 text-sm">
                 Book a Strategy Call <ArrowRight className="w-4 h-4 ml-1" />
@@ -113,9 +108,6 @@ export const Navbar = () => {
           ))}
         </nav>
         <div className="mt-auto pb-12 flex flex-col gap-4">
-          <Link href="#login" onClick={() => setMobileMenuOpen(false)} className="py-4 text-center border border-white/10 rounded-full font-medium">
-            Log In
-          </Link>
           <Link href="#audit" onClick={() => setMobileMenuOpen(false)}>
             <GlowButton variant="primary" className="w-full">
               Book a Strategy Call
