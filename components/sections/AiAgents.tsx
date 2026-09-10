@@ -2,63 +2,63 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Brain, LineChart, PenTool, Search, Settings, Activity, Target } from "lucide-react";
+import { Brain, LineChart, PenTool, Search, Settings, Target, Globe } from "lucide-react";
 
 const agents = [
   {
     name: "Strategy Agent",
-    role: "Identifies market gaps.",
+    role: "Researches markets, competitors and audiences.",
     icon: <Brain className="w-5 h-5" />,
-    tasks: ["Competitor Analysis", "Trend Spotting", "Positioning"],
-    status: "Analyzing market"
-  },
-  {
-    name: "Performance Agent",
-    role: "Optimizes campaigns continuously.",
-    icon: <Target className="w-5 h-5" />,
-    tasks: ["CPC / CPA / ROAS", "Bid Management", "Budget Allocation"],
-    status: "Monitoring campaigns"
+    status: "ACTIVE"
   },
   {
     name: "Creative Agent",
-    role: "Generates high-converting assets.",
+    role: "Creates campaigns, ads, content and concepts.",
     icon: <PenTool className="w-5 h-5" />,
-    tasks: ["Ad Copy", "Visuals", "A/B Testing Content"],
-    status: "Generating creatives"
+    status: "ACTIVE"
+  },
+  {
+    name: "Performance Agent",
+    role: "Monitors Google/Meta campaigns.",
+    icon: <Target className="w-5 h-5" />,
+    status: "ACTIVE"
   },
   {
     name: "SEO Agent",
-    role: "Dominates AI search engines.",
+    role: "Optimizes organic search.",
     icon: <Search className="w-5 h-5" />,
-    tasks: ["Keyword Clustering", "AEO Strategy", "Rank Tracking"],
-    status: "Tracking visibility"
+    status: "ACTIVE"
   },
   {
-    name: "Automation Agent",
-    role: "Builds seamless lead flows.",
-    icon: <Settings className="w-5 h-5" />,
-    tasks: ["CRM Sync", "WhatsApp Alerts", "Lead Scoring"],
-    status: "Routing leads"
+    name: "GEO Agent",
+    role: "Improves visibility in AI search.",
+    icon: <Globe className="w-5 h-5" />,
+    status: "ACTIVE"
   },
   {
     name: "Analytics Agent",
-    role: "Turns data into insights.",
+    role: "Turns marketing data into decisions.",
     icon: <LineChart className="w-5 h-5" />,
-    tasks: ["Attribution", "Funnel Metrics", "Custom Reports"],
-    status: "Processing data"
+    status: "ACTIVE"
+  },
+  {
+    name: "Automation Agent",
+    role: "Automates repetitive growth workflows.",
+    icon: <Settings className="w-5 h-5" />,
+    status: "ACTIVE"
   },
 ];
 
 export const AiAgents = () => {
   return (
     <section className="py-24 bg-background">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 max-w-6xl">
         <SectionHeading 
-          title="Meet your AI growth team."
+          title="Meet Your AI Growth Team"
           subtitle="Specialized AI agents working in harmony to accelerate your execution."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {agents.map((agent, i) => (
             <motion.div
               key={agent.name}
@@ -70,14 +70,14 @@ export const AiAgents = () => {
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3 text-foreground font-semibold">
-                  <div className="p-2 rounded-lg bg-surface border border-white/10 text-accent">
+                  <div className="p-2 rounded-lg bg-surface border border-white/10 text-accent group-hover:scale-110 transition-transform">
                     {agent.icon}
                   </div>
                   {agent.name}
                 </div>
                 
                 {/* Live Status Indicator */}
-                <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-medium text-secondary uppercase tracking-wider">
+                <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-accent/10 border border-accent/20 text-[10px] font-bold text-accent uppercase tracking-wider">
                   <span className="relative flex h-1.5 w-1.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent"></span>
@@ -86,20 +86,9 @@ export const AiAgents = () => {
                 </div>
               </div>
 
-              <p className="text-secondary text-sm mb-6 pb-6 border-b border-white/5">
+              <p className="text-secondary text-sm">
                 {agent.role}
               </p>
-
-              <div className="mt-auto">
-                <div className="text-xs text-white/40 uppercase tracking-wider mb-3">Monitors</div>
-                <ul className="flex flex-wrap gap-2">
-                  {agent.tasks.map(task => (
-                    <li key={task} className="text-xs text-secondary bg-surface px-2 py-1 rounded-md border border-white/5">
-                      {task}
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </motion.div>
           ))}
         </div>

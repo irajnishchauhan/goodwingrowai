@@ -9,8 +9,8 @@ export const WhyGoodwin = () => {
     <section className="py-24 bg-surface/30 relative">
       <div className="container mx-auto px-6">
         <SectionHeading 
-          title="Not another marketing agency."
-          subtitle="We are a technology-enabled growth partner."
+          title="Marketing has changed."
+          subtitle="You're not hiring another agency. You're building a growth engine."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mt-16">
@@ -26,11 +26,12 @@ export const WhyGoodwin = () => {
             
             <ul className="space-y-6">
               {[
-                "Manual, slow execution",
-                "Fragmented tools and data",
-                "Expensive retainer models",
-                "Reactive to market changes",
-                "Siloed channels (SEO vs Ads)"
+                "Manual execution",
+                "Separate specialists",
+                "Campaign focused",
+                "Reactive reporting",
+                "Slow iteration",
+                "Fixed workflows"
               ].map((item, i) => (
                 <li key={i} className="flex items-start text-secondary">
                   <X className="w-5 h-5 text-red-500/70 mr-4 shrink-0 mt-0.5" />
@@ -58,11 +59,12 @@ export const WhyGoodwin = () => {
             
             <ul className="space-y-6 relative z-10">
               {[
-                "AI-accelerated execution",
-                "Connected data and insights",
-                "Performance-focused outcomes",
-                "Proactive, real-time optimization",
-                "Unified growth engine"
+                "AI-assisted execution",
+                "Connected growth system",
+                "Business outcome focused",
+                "Continuous intelligence",
+                "Rapid experimentation",
+                "Adaptive workflows"
               ].map((item, i) => (
                 <li key={i} className="flex items-start text-foreground font-medium">
                   <Check className="w-5 h-5 text-accent mr-4 shrink-0 mt-0.5" />
@@ -77,10 +79,10 @@ export const WhyGoodwin = () => {
         {/* 4 Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20 max-w-6xl mx-auto">
           {[
-            { title: "AI-Native", desc: "AI is embedded into every workflow from day one." },
-            { title: "Strategy First", desc: "Technology strictly follows business strategy." },
-            { title: "Performance Focused", desc: "Every activity connects to measurable outcomes." },
-            { title: "Human + AI", desc: "AI accelerates execution. Humans provide judgment." }
+            { title: "AI-Native", desc: "AI is embedded throughout the workflow." },
+            { title: "Strategy First", desc: "AI doesn't replace strategy." },
+            { title: "Performance Obsessed", desc: "Every activity connects to measurable outcomes." },
+            { title: "Human + AI", desc: "AI handles scale. Humans handle judgment." }
           ].map((pillar, i) => (
             <motion.div 
               key={pillar.title}
