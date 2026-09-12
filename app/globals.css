@@ -8,12 +8,20 @@
   --color-accent: #B8FF3D;
   --color-surface: #111311;
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  
+  /* Emil Kowalski inspired easing tokens */
+  --ease-emil: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out-emil: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 @layer base {
   :root {
     --background: #0A0A0A;
     --foreground: #F7F7F2;
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 400ms;
   }
   html, body {
     background-color: var(--background);
@@ -24,6 +32,18 @@
   ::selection {
     background-color: #B8FF3D;
     color: #0A0A0A;
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 

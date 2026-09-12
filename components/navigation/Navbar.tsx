@@ -93,9 +93,10 @@ export const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <motion.div 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: mobileMenuOpen ? 1 : 0, y: mobileMenuOpen ? 0 : -20 }}
-        className={`fixed inset-0 z-40 bg-background/95 backdrop-blur-2xl flex flex-col pt-32 px-6 ${mobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{ opacity: mobileMenuOpen ? 1 : 0, scale: mobileMenuOpen ? 1 : 0.98 }}
+        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        className={`fixed inset-0 z-40 bg-background/95 backdrop-blur-2xl flex flex-col pt-32 px-6 origin-top-right ${mobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
       >
         <nav className="flex flex-col gap-6 text-2xl font-semibold">
           {navLinks.map((link) => (

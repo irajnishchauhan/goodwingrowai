@@ -39,9 +39,9 @@ export const AiDashboardDemo = () => {
         
         <div className="flex flex-col items-center text-center mb-16">
            <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="glass rounded-full px-4 py-1.5 mb-6 text-sm text-secondary flex items-center gap-2"
            >
              <Activity className="w-4 h-4 text-accent" /> Sample Growth Intelligence Dashboard

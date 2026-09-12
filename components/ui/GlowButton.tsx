@@ -23,7 +23,8 @@ export const GlowButton = forwardRef<HTMLButtonElement, GlowButtonProps>(
       <motion.button
         ref={ref}
         whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+        whileTap={{ scale: 0.97 }}
+        transition={{ type: "spring", stiffness: 400, damping: 25 }}
         className={cn(baseStyles, variants[variant], className)}
         {...props}
       >

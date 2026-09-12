@@ -22,6 +22,16 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
+      transitionTimingFunction: {
+        'emil': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'out-quad': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        'in-out-emil': 'cubic-bezier(0.65, 0, 0.35, 1)',
+      },
+      transitionDuration: {
+        'fast': '150ms',
+        'normal': '250ms',
+        'slow': '400ms',
+      }
     },
   },
   plugins: [],

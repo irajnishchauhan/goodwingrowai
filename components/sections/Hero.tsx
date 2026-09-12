@@ -18,8 +18,8 @@ export const Hero = () => {
       <div className="container relative z-10 mx-auto px-6 flex flex-col items-center text-center">
         
         <motion.h1 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.98, filter: "blur(4px)" }}
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-foreground max-w-5xl leading-[1.1]"
         >
@@ -28,18 +28,18 @@ export const Hero = () => {
         </motion.h1>
 
         <motion.p 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, scale: 0.98, filter: "blur(4px)" }}
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="mt-8 text-lg md:text-xl text-secondary max-w-2xl leading-relaxed"
         >
           Strategy, creative, advertising, search, automation and analytics — connected into one intelligent growth engine.
         </motion.p>
 
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="mt-12 flex flex-col sm:flex-row items-center gap-4 mb-20"
         >
           <a href="#audit">
@@ -57,9 +57,9 @@ export const Hero = () => {
         {/* AI Growth Engine Visualization */}
         {mounted && (
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="w-full max-w-4xl mx-auto glass rounded-2xl p-8 border-accent/20 relative box-glow flex flex-col items-center"
           >
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-full bg-accent/5 rounded-full blur-[60px] pointer-events-none" />
@@ -122,8 +122,8 @@ export const Hero = () => {
             {/* Vertical Line to Data */}
             <div className="h-8 w-px bg-gradient-to-b from-white/20 to-accent/30 relative">
                <motion.div 
-                animate={{ top: ["0%", "100%"], opacity: [0, 1, 0] }}
-                transition={{ duration: 2, delay: 1, repeat: Infinity, ease: "linear" }}
+                animate={{ top: ["0%", "100%"], opacity: [0, 0.5, 0] }}
+                transition={{ duration: 3, delay: 1, repeat: Infinity, ease: "linear" }}
                 className="absolute left-1/2 -translate-x-1/2 w-1 h-3 bg-accent rounded-full blur-[1px]"
               />
             </div>
@@ -136,16 +136,16 @@ export const Hero = () => {
             {/* Vertical Line to Optimize */}
             <div className="h-8 w-px bg-gradient-to-b from-accent/30 to-accent/50 relative">
               <motion.div 
-                animate={{ top: ["0%", "100%"], opacity: [0, 1, 0] }}
-                transition={{ duration: 1.5, delay: 1.5, repeat: Infinity, ease: "linear" }}
+                animate={{ top: ["0%", "100%"], opacity: [0, 0.5, 0] }}
+                transition={{ duration: 3, delay: 1.5, repeat: Infinity, ease: "linear" }}
                 className="absolute left-1/2 -translate-x-1/2 w-1 h-3 bg-accent rounded-full blur-[1px]"
               />
             </div>
 
             {/* Optimize Node */}
-            <div className="px-6 py-3 rounded-xl bg-accent text-background font-bold tracking-widest text-sm z-10 relative shadow-[0_0_20px_rgba(184,255,61,0.4)] flex items-center gap-2">
+            <div className="px-6 py-3 rounded-xl bg-accent text-background font-bold tracking-widest text-sm z-10 relative shadow-[0_0_20px_rgba(184,255,61,0.2)] flex items-center gap-2">
               OPTIMIZE
-              <motion.svg animate={{ rotate: 360 }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <motion.svg animate={{ rotate: 360 }} transition={{ duration: 8, repeat: Infinity, ease: "linear" }} className="w-4 h-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
               </motion.svg>
             </div>

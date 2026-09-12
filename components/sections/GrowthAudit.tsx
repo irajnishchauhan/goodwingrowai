@@ -55,9 +55,10 @@ export const GrowthAudit = () => {
 
         <div className="lg:w-1/2 w-full">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-100px" }}
             className="glass rounded-3xl p-8 md:p-10 border-white/10 relative overflow-hidden box-glow"
           >
             {submitted ? (
@@ -72,14 +73,14 @@ export const GrowthAudit = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs uppercase tracking-wider text-secondary font-medium">Website</label>
-                  <input required name="website" type="url" className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" placeholder="https://example.com" />
+                <div className="flex flex-col gap-2 group">
+                  <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Website</label>
+                  <input required name="website" type="url" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-normal ease-emil" placeholder="https://example.com" />
                 </div>
                 
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs uppercase tracking-wider text-secondary font-medium">Industry</label>
-                  <select required name="industry" className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors appearance-none">
+                <div className="flex flex-col gap-2 group">
+                  <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Industry</label>
+                  <select required name="industry" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-normal ease-emil appearance-none">
                     <option value="">Select Industry</option>
                     <option value="healthcare">Healthcare</option>
                     <option value="realestate">Real Estate</option>
@@ -93,9 +94,9 @@ export const GrowthAudit = () => {
                   </select>
                 </div>
 
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs uppercase tracking-wider text-secondary font-medium">Monthly Marketing Spend</label>
-                  <select required name="spend" className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors appearance-none">
+                <div className="flex flex-col gap-2 group">
+                  <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Monthly Marketing Spend</label>
+                  <select required name="spend" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-normal ease-emil appearance-none">
                     <option value="">Select Range</option>
                     <option value="under5k">Under $5,000</option>
                     <option value="5k_20k">$5,000 - $20,000</option>
@@ -104,9 +105,9 @@ export const GrowthAudit = () => {
                   </select>
                 </div>
 
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs uppercase tracking-wider text-secondary font-medium">Primary Goal</label>
-                  <textarea required name="goal" rows={3} className="bg-surface border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors resize-none" placeholder="e.g. Decrease CAC, scale lead volume, automate workflows..."></textarea>
+                <div className="flex flex-col gap-2 group">
+                  <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Primary Goal</label>
+                  <textarea required name="goal" rows={3} className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-normal ease-emil resize-none" placeholder="e.g. Decrease CAC, scale lead volume, automate workflows..."></textarea>
                 </div>
                 
                 <GlowButton variant="primary" type="submit" className="w-full mt-4 py-4">
