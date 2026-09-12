@@ -1,10 +1,10 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
-function ToolNode({ tool, progress, opacity, scale }: { tool: any, progress: any, opacity: any, scale: any }) {
+function ToolNode({ tool, progress, opacity, scale }: { tool: { label: string, x: number, y: number, color: string }, progress: MotionValue<number>, opacity: MotionValue<number>, scale: MotionValue<number> }) {
   const x = useTransform(progress, [0, 1], [tool.x, 0]);
   const y = useTransform(progress, [0, 1], [tool.y, 0]);
   return (
@@ -41,7 +41,7 @@ export const TheProblem = () => {
           
           <motion.div style={{ opacity: useTransform(progress, [0.7, 0.9], [1, 0]) }} className="absolute top-0 text-center w-full">
              <SectionHeading 
-              title="Marketing shouldn't feel like managing 12 different tools."
+              title="Your marketing generates data. But does it generate growth?"
               subtitle="Businesses struggle with fragmented marketing, wasted ad spend, inconsistent content, and disconnected data."
             />
           </motion.div>
@@ -58,12 +58,12 @@ export const TheProblem = () => {
             
             {/* The Disconnected Tools */}
             {[
-              { label: "SEO Agency", x: -200, y: -150, color: "bg-blue-500/10 border-blue-500/30 text-blue-400" },
-              { label: "Ads Manager", x: 200, y: -120, color: "bg-red-500/10 border-red-500/30 text-red-400" },
-              { label: "Content Writer", x: -180, y: 100, color: "bg-yellow-500/10 border-yellow-500/30 text-yellow-400" },
-              { label: "Analytics Tool", x: 180, y: 120, color: "bg-purple-500/10 border-purple-500/30 text-purple-400" },
-              { label: "Email Software", x: 0, y: -180, color: "bg-pink-500/10 border-pink-500/30 text-pink-400" },
-              { label: "CRM", x: 0, y: 180, color: "bg-green-500/10 border-green-500/30 text-green-400" },
+              { label: "Website", x: -200, y: -150, color: "bg-blue-500/10 border-blue-500/30 text-blue-400" },
+              { label: "Ads", x: 200, y: -120, color: "bg-red-500/10 border-red-500/30 text-red-400" },
+              { label: "Follow-ups", x: -180, y: 100, color: "bg-yellow-500/10 border-yellow-500/30 text-yellow-400" },
+              { label: "Analytics", x: 180, y: 120, color: "bg-purple-500/10 border-purple-500/30 text-purple-400" },
+              { label: "Leads", x: 0, y: -180, color: "bg-pink-500/10 border-pink-500/30 text-pink-400" },
+              { label: "CRM & Reporting", x: 0, y: 180, color: "bg-green-500/10 border-green-500/30 text-green-400" },
             ].map((tool, i) => (
               <ToolNode key={i} tool={tool} progress={progress} opacity={opacity} scale={scale} />
             ))}

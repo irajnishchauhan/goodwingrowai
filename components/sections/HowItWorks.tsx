@@ -7,28 +7,33 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 const steps = [
   {
     num: "01",
-    title: "DISCOVER",
-    desc: "Understand your business, audience, competitors and market context deeply using AI-driven research."
+    title: "Diagnose",
+    desc: "We analyze your current data, tracking setup, and campaigns to find immediate bottlenecks and missed revenue."
   },
   {
     num: "02",
-    title: "STRATEGIZE",
-    desc: "Build a comprehensive AI-powered growth roadmap tailored to your exact business objectives."
+    title: "Strategize",
+    desc: "We design a custom growth architecture, defining exactly which channels, AI models, and automations will drive ROI."
   },
   {
     num: "03",
-    title: "CREATE",
-    desc: "Generate high-converting campaigns, engaging content, and premium creative assets at speed."
+    title: "Build",
+    desc: "We connect your tools into a single intelligence engine. Tracking, CRM pipelines, and AI scoring are unified."
   },
   {
     num: "04",
-    title: "OPTIMIZE",
-    desc: "Use real-time data and AI algorithms to continuously improve performance across all channels."
+    title: "Launch",
+    desc: "We deploy high-converting campaigns across search and social, powered by data-driven creative and precise targeting."
   },
   {
     num: "05",
-    title: "SCALE",
-    desc: "Automate what works and aggressively scale the growth engine to compound your returns."
+    title: "Optimize",
+    desc: "Our AI optimization engine begins testing variables in real-time, shifting budget to top-performing segments automatically."
+  },
+  {
+    num: "06",
+    title: "Scale",
+    desc: "Once unit economics are profitable, we aggressively scale spend and automate follow-ups to compound growth."
   }
 ];
 
@@ -42,12 +47,13 @@ export const HowItWorks = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
   return (
-    <section id="how-it-works" ref={containerRef} className="bg-background h-[300vh] relative">
+    <section id="how-we-work" ref={containerRef} className="bg-surface h-[300vh] relative border-t border-white/5">
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden pt-20">
         
         <div className="container mx-auto px-6 mb-10">
           <SectionHeading 
-            title="From business problem to measurable growth."
+            title="How we build your growth engine."
+            subtitle="A systematic, engineered approach to scaling businesses. We don't guess; we test, measure, and scale."
             align="left"
           />
         </div>
@@ -55,20 +61,20 @@ export const HowItWorks = () => {
         <motion.div style={{ x }} className="flex pl-6 md:pl-20 gap-8 lg:gap-16 w-fit pb-20">
           {steps.map((step, index) => (
             <div key={step.num} className="w-[300px] md:w-[450px] shrink-0">
-              <div className="text-accent text-6xl md:text-8xl font-black opacity-20 mb-6">{step.num}</div>
+              <div className="text-accent text-6xl md:text-8xl font-black opacity-10 mb-6 font-mono tracking-tighter">{step.num}</div>
               
-              <div className="relative pl-8 border-l-2 border-white/10 h-full">
+              <div className="relative pl-8 border-l border-white/10 h-full">
                 {/* Animated line dot indicator */}
                 <motion.div 
-                  className="absolute top-0 -left-[9px] w-4 h-4 rounded-full bg-accent border-4 border-background"
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  className="absolute top-0 -left-[5px] w-2.5 h-2.5 rounded-full bg-accent"
+                  initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
                 />
                 
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 tracking-tight">{step.title}</h3>
-                <p className="text-secondary text-lg leading-relaxed">{step.desc}</p>
+                <p className="text-secondary text-base md:text-lg leading-relaxed">{step.desc}</p>
               </div>
             </div>
           ))}

@@ -18,8 +18,7 @@ export const FinalCta = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold tracking-tight text-foreground max-w-4xl leading-tight"
         >
-          You're not hiring another agency.<br/>
-          <span className="text-glow text-accent">You're building a growth engine.</span>
+          Your next growth lever is probably already in your data.
         </motion.h2>
 
         <motion.p 
@@ -29,7 +28,7 @@ export const FinalCta = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mt-8 text-xl text-secondary max-w-2xl"
         >
-          We built an AI-powered growth system, and our team operates it for your business.
+          Let our intelligence engine find it, optimize it, and scale it. Stop guessing and start growing with predictable unit economics.
         </motion.p>
 
         <motion.div 
@@ -40,8 +39,8 @@ export const FinalCta = () => {
           className="mt-12 flex flex-col sm:flex-row items-center gap-4"
         >
           <a href="#audit">
-            <GlowButton variant="primary" className="w-full sm:w-auto h-14 px-10 text-base">
-              Get Growth Audit
+            <GlowButton variant="primary" className="w-full sm:w-auto h-14 px-10 text-base font-semibold">
+              Get Your Free Growth Audit
             </GlowButton>
           </a>
         </motion.div>

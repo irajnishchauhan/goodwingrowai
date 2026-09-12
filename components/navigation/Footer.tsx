@@ -3,21 +3,19 @@ import { siteConfig } from "@/lib/config";
 import { GoodwinLogo } from "@/components/ui/GoodwinLogo";
 
 const footerLinks = {
-  solutions: [
-    { name: "AI Strategy", href: "#" },
-    { name: "AI Creative", href: "#" },
-    { name: "AI Performance", href: "#" },
-    { name: "AI Search", href: "#" },
-    { name: "AI Automation", href: "#" },
-    { name: "AI Analytics", href: "#" },
+  services: [
+    { name: "AI Marketing", href: "#" },
+    { name: "Performance Ads", href: "#" },
+    { name: "Lead Generation", href: "#" },
+    { name: "Automation", href: "#" },
+    { name: "Analytics & BI", href: "#" },
+    { name: "Growth Strategy", href: "#" },
   ],
   industries: [
-    { name: "Healthcare", href: "#" },
-    { name: "Real Estate", href: "#" },
-    { name: "Education", href: "#" },
-    { name: "D2C", href: "#" },
-    { name: "Automotive", href: "#" },
-    { name: "Professional Services", href: "#" },
+    { name: "Healthcare & Clinics", href: "#" },
+    { name: "Real Estate & Property", href: "#" },
+    { name: "B2B SaaS & Tech", href: "#" },
+    { name: "E-Commerce & D2C", href: "#" },
   ],
   company: [
     { name: "About", href: "/about" },
@@ -62,9 +60,9 @@ export const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Solutions</h4>
+            <h4 className="text-foreground font-semibold mb-4 text-sm tracking-wide">Services</h4>
             <ul className="flex flex-col gap-3">
-              {footerLinks.solutions.map((link) => (
+              {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-secondary hover:text-accent transition-colors text-sm">
                     {link.name}
@@ -75,7 +73,7 @@ export const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Industries</h4>
+            <h4 className="text-foreground font-semibold mb-4 text-sm tracking-wide">Industries</h4>
             <ul className="flex flex-col gap-3">
               {footerLinks.industries.map((link) => (
                 <li key={link.name}>
@@ -88,7 +86,7 @@ export const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Company</h4>
+            <h4 className="text-foreground font-semibold mb-4 text-sm tracking-wide">Company</h4>
             <ul className="flex flex-col gap-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -101,7 +99,7 @@ export const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Legal</h4>
+            <h4 className="text-foreground font-semibold mb-4 text-sm tracking-wide">Legal</h4>
             <ul className="flex flex-col gap-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>

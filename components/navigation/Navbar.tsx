@@ -8,12 +8,11 @@ import { GlowButton } from "@/components/ui/GlowButton";
 import { GoodwinLogo } from "@/components/ui/GoodwinLogo";
 
 const navLinks = [
-  { name: "Solutions", href: "#solutions" },
-  { name: "AI Growth Engine", href: "#engine" },
+  { name: "Services", href: "#services" },
   { name: "Industries", href: "#industries" },
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Case Studies", href: "#case-studies" },
-  { name: "Insights", href: "#insights" },
+  { name: "How We Work", href: "#how-we-work" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "Blog", href: "#blog" },
 ];
 
 export const Navbar = () => {
@@ -75,7 +74,7 @@ export const Navbar = () => {
           <div className="hidden lg:flex items-center gap-4">
             <Link href="#audit">
               <GlowButton variant="primary" className="py-2.5 px-6 text-sm">
-                Book a Strategy Call <ArrowRight className="w-4 h-4 ml-1" />
+                Free Growth Audit <ArrowRight className="w-4 h-4 ml-1" />
               </GlowButton>
             </Link>
           </div>
@@ -113,7 +112,7 @@ export const Navbar = () => {
         <div className="mt-auto pb-12 flex flex-col gap-4">
           <Link href="#audit" onClick={() => setMobileMenuOpen(false)}>
             <GlowButton variant="primary" className="w-full">
-              Book a Strategy Call
+              Free Growth Audit
             </GlowButton>
           </Link>
         </div>

@@ -32,7 +32,7 @@ export const GrowthAudit = () => {
         
         <div className="lg:w-1/2">
           <SectionHeading 
-            title="Find Your Biggest Growth Opportunities"
+            title="Find what's holding your growth back."
             subtitle="Tell us about your business. Our AI-assisted growth audit identifies opportunities across acquisition, content, search, conversion and automation."
             align="left"
             className="mb-8"
@@ -62,56 +62,58 @@ export const GrowthAudit = () => {
             className="glass rounded-3xl p-8 md:p-10 border-white/10 relative overflow-hidden box-glow"
           >
             {submitted ? (
-              <div className="text-center py-16">
-                <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
-                   <svg className="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="text-center py-16"
+              >
+                <div className="w-20 h-20 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mx-auto mb-6 relative">
+                   <div className="absolute inset-0 bg-accent/20 rounded-full blur-xl" />
+                   <svg className="w-10 h-10 text-accent relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                    </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">Analyzing Your Growth</h3>
-                <p className="text-secondary">Our system is processing your details. Our strategy team will contact you shortly with your custom roadmap.</p>
-              </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4 tracking-tight">Diagnostic Initiated</h3>
+                <p className="text-secondary leading-relaxed">Our system has logged your parameters. A growth architect will review your data and send your custom roadmap shortly.</p>
+              </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                <div className="flex flex-col gap-2 group">
-                  <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Website</label>
-                  <input required name="website" type="url" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-colors duration-normal ease-emil" placeholder="https://example.com" />
+              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                <div className="flex flex-col gap-2 group relative">
+                  <label className="text-xs uppercase tracking-widest text-secondary font-semibold group-focus-within:text-accent transition-colors duration-300">Target URL</label>
+                  <input required name="website" type="url" className="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3.5 text-foreground placeholder:text-white/20 focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil" placeholder="https://yourdomain.com" />
                 </div>
                 
-                <div className="flex flex-col gap-2 group">
-                  <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Industry</label>
-                  <select required name="industry" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-colors duration-normal ease-emil appearance-none">
-                    <option value="">Select Industry</option>
-                    <option value="healthcare">Healthcare</option>
-                    <option value="realestate">Real Estate</option>
+                <div className="flex flex-col gap-2 group relative">
+                  <label className="text-xs uppercase tracking-widest text-secondary font-semibold group-focus-within:text-accent transition-colors duration-300">Industry Sector</label>
+                  <select required name="industry" className="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil appearance-none">
+                    <option value="">Select Primary Sector</option>
+                    <option value="healthcare">Healthcare & Clinics</option>
+                    <option value="realestate">Real Estate & Property</option>
                     <option value="education">Education</option>
-                    <option value="d2c">D2C / Ecommerce</option>
+                    <option value="d2c">E-Commerce & D2C</option>
                     <option value="automotive">Automotive</option>
-                    <option value="professional">Professional Services</option>
-                    <option value="hospitality">Hospitality</option>
-                    <option value="startups">Startups</option>
-                    <option value="local">Local Businesses</option>
+                    <option value="b2b">B2B SaaS & Tech</option>
                   </select>
                 </div>
 
-                <div className="flex flex-col gap-2 group">
-                  <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Monthly Marketing Spend</label>
-                  <select required name="spend" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-colors duration-normal ease-emil appearance-none">
-                    <option value="">Select Range</option>
-                    <option value="under5k">Under $5,000</option>
-                    <option value="5k_20k">$5,000 - $20,000</option>
-                    <option value="20k_50k">$20,000 - $50,000</option>
-                    <option value="over50k">Over $50,000</option>
+                <div className="flex flex-col gap-2 group relative">
+                  <label className="text-xs uppercase tracking-widest text-secondary font-semibold group-focus-within:text-accent transition-colors duration-300">Monthly Ad Spend</label>
+                  <select required name="spend" className="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil appearance-none">
+                    <option value="">Select Investment Range</option>
+                    <option value="under5k">Under $5k (Scaling Phase)</option>
+                    <option value="5k_20k">$5k - $20k (Growth Phase)</option>
+                    <option value="20k_50k">$20k - $50k (Acceleration)</option>
+                    <option value="over50k">$50k+ (Enterprise)</option>
                   </select>
                 </div>
 
-                <div className="flex flex-col gap-2 group">
-                  <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Primary Goal</label>
-                  <textarea required name="goal" rows={3} className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-colors duration-normal ease-emil resize-none" placeholder="e.g. Decrease CAC, scale lead volume, automate workflows..."></textarea>
+                <div className="flex flex-col gap-2 group relative">
+                  <label className="text-xs uppercase tracking-widest text-secondary font-semibold group-focus-within:text-accent transition-colors duration-300">Primary Objective</label>
+                  <textarea required name="goal" rows={3} className="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3.5 text-foreground placeholder:text-white/20 focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil resize-none" placeholder="E.g. Decrease CAC by 20%, scale lead volume without breaking unit economics..."></textarea>
                 </div>
                 
-                <GlowButton variant="primary" type="submit" className="w-full mt-4 py-4">
-                  Analyze My Growth
+                <GlowButton variant="primary" type="submit" className="w-full mt-2 py-4 text-base font-semibold tracking-wide">
+                  Run Growth Diagnostic
                 </GlowButton>
               </form>
             )}

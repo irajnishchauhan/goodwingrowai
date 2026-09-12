@@ -1,79 +1,75 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const industries = [
   {
-    name: "Healthcare",
-    challenges: "Patient acquisition, local competition, trust.",
-    solution: "Local SEO, WhatsApp lead automation, content engine.",
+    name: "Healthcare & Clinics",
+    challenge: "High patient acquisition costs (CAC) and strict compliance limiting marketing agility.",
+    opportunity: "AI-driven local search dominance and HIPAA-compliant automated lead nurturing.",
   },
   {
-    name: "Real Estate",
-    challenges: "High CPA, lead quality, long sales cycles.",
-    solution: "Meta Ads, CRM automation, hyper-targeted local campaigns.",
+    name: "E-Commerce & D2C",
+    challenge: "Creative fatigue, rising ad costs, and cart abandonment eroding margins.",
+    opportunity: "Predictive LTV modeling, dynamic creative testing, and automated retention loops.",
   },
   {
-    name: "Education",
-    challenges: "Enrollment numbers, high competition, tracking.",
-    solution: "Google Ads, AI search visibility, unified analytics.",
+    name: "B2B SaaS & Tech",
+    challenge: "Long sales cycles and difficulty attributing pipeline revenue to specific marketing efforts.",
+    opportunity: "Full-funnel tracking, intent-based lead scoring, and automated sales handoffs.",
   },
   {
-    name: "D2C / Ecommerce",
-    challenges: "ROAS, creative fatigue, cart abandonment.",
-    solution: "AI Creative generation, dynamic retargeting, conversion optimization.",
-  },
-  {
-    name: "Automotive",
-    challenges: "Test drives, dealership visits, inventory marketing.",
-    solution: "Local GEO, Meta lead generation, automated follow-ups.",
-  },
-  {
-    name: "Professional Services",
-    challenges: "Authority building, high-value leads.",
-    solution: "Thought leadership content, LinkedIn B2B AI strategy.",
+    name: "Real Estate & Property",
+    challenge: "Low-quality lead volume wasting agent time and high competition in local markets.",
+    opportunity: "Hyper-targeted geo-fencing, AI qualification bots, and speed-to-lead automation.",
   }
 ];
 
 export const Industries = () => {
   return (
-    <section id="industries" className="py-24 bg-surface/30">
+    <section id="industries" className="py-32 bg-background border-t border-white/5">
       <div className="container mx-auto px-6">
-        <SectionHeading 
-          title="AI growth systems built around your business."
-          subtitle="We don't do generic marketing. We architect industry-specific growth engines."
-        />
+        
+        <div className="mb-20">
+          <SectionHeading 
+            title="Built for complex, data-rich industries."
+            subtitle="Generic marketing doesn't work. We engineer specific growth solutions for sectors with high compliance, long sales cycles, or intense competition."
+            align="left"
+          />
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+        <div className="max-w-4xl border-t border-white/10">
           {industries.map((ind, i) => (
-            <motion.div
+            <div 
               key={ind.name}
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group glass p-8 rounded-2xl cursor-pointer hover:bg-surface/80 transition-colors duration-normal ease-emil"
+              className="border-b border-white/10 py-8 relative group"
             >
-              <h3 className="text-2xl font-bold text-foreground mb-6 group-hover:text-accent transition-colors">{ind.name}</h3>
-              
-              <div className="mb-4">
-                <span className="text-xs uppercase tracking-wider text-white/40 block mb-1">Typical Challenges</span>
-                <p className="text-sm text-secondary">{ind.challenges}</p>
+              <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-12">
+                <h3 className="text-2xl md:text-3xl font-medium text-foreground md:w-1/3 transition-colors duration-300 group-hover:text-accent">
+                  {ind.name}
+                </h3>
+                
+                <div className="md:w-2/3 flex flex-col gap-4">
+                  <div>
+                    <span className="text-xs uppercase tracking-widest text-secondary mb-1 block">The Challenge</span>
+                    <p className="text-base text-foreground/80">{ind.challenge}</p>
+                  </div>
+                  <div>
+                    <span className="text-xs uppercase tracking-widest text-accent/80 mb-1 block">The Opportunity</span>
+                    <p className="text-base text-foreground">{ind.opportunity}</p>
+                  </div>
+                </div>
               </div>
               
-              <div className="mb-8">
-                <span className="text-xs uppercase tracking-wider text-accent/60 block mb-1">Goodwin Solution</span>
-                <p className="text-sm text-foreground">{ind.solution}</p>
+              {/* Optional: arrow that appears on hover */}
+              <div className="absolute right-0 top-8 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block">
+                <ArrowUpRight className="w-8 h-8 text-accent/50" />
               </div>
-
-              <div className="flex items-center text-sm font-medium text-secondary group-hover:text-foreground transition-colors">
-                Explore {ind.name} Growth <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </motion.div>
+            </div>
           ))}
         </div>
+
       </div>
     </section>
   );

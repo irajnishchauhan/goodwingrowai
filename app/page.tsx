@@ -1,17 +1,13 @@
 import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { TheProblem } from "@/components/sections/TheProblem";
-import { PlatformModules } from "@/components/sections/PlatformModules";
-import { AiDashboardDemo } from "@/components/sections/AiDashboardDemo";
+import { TheSolution } from "@/components/sections/TheSolution";
+import { Services } from "@/components/sections/Services";
+import { SystemPipeline } from "@/components/sections/SystemPipeline";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { AiAgents } from "@/components/sections/AiAgents";
-import { AiGrowthLoop } from "@/components/sections/AiGrowthLoop";
 import { Industries } from "@/components/sections/Industries";
-import { CaseStudies } from "@/components/sections/CaseStudies";
-import { WhyGoodwin } from "@/components/sections/WhyGoodwin";
-import { RoiCalculator } from "@/components/sections/RoiCalculator";
+import { Outcomes } from "@/components/sections/Outcomes";
 import { GrowthAudit } from "@/components/sections/GrowthAudit";
-import { Insights } from "@/components/sections/Insights";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export default function Home() {
@@ -20,17 +16,13 @@ export default function Home() {
       <Hero />
       <TrustBar />
       <TheProblem />
-      <PlatformModules />
-      <AiDashboardDemo />
+      <TheSolution />
+      <Services />
+      <SystemPipeline />
       <HowItWorks />
-      <AiAgents />
-      <AiGrowthLoop />
       <Industries />
-      <CaseStudies />
-      <WhyGoodwin />
-      <RoiCalculator />
+      <Outcomes />
       <GrowthAudit />
-      <Insights />
       <FinalCta />
     </>
   );
