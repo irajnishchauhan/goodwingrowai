@@ -4,6 +4,19 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
+function ToolNode({ tool, progress, opacity, scale }: { tool: any, progress: any, opacity: any, scale: any }) {
+  const x = useTransform(progress, [0, 1], [tool.x, 0]);
+  const y = useTransform(progress, [0, 1], [tool.y, 0]);
+  return (
+    <motion.div
+      className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded-lg border text-sm font-medium whitespace-nowrap backdrop-blur-sm ${tool.color}`}
+      style={{ x, y, opacity, scale }}
+    >
+      {tool.label}
+    </motion.div>
+  );
+}
+
 export const TheProblem = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -52,18 +65,7 @@ export const TheProblem = () => {
               { label: "Email Software", x: 0, y: -180, color: "bg-pink-500/10 border-pink-500/30 text-pink-400" },
               { label: "CRM", x: 0, y: 180, color: "bg-green-500/10 border-green-500/30 text-green-400" },
             ].map((tool, i) => (
-              <motion.div
-                key={i}
-                className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded-lg border text-sm font-medium whitespace-nowrap backdrop-blur-sm ${tool.color}`}
-                style={{
-                  x: useTransform(progress, [0, 1], [tool.x, 0]),
-                  y: useTransform(progress, [0, 1], [tool.y, 0]),
-                  opacity,
-                  scale,
-                }}
-              >
-                {tool.label}
-              </motion.div>
+              <ToolNode key={i} tool={tool} progress={progress} opacity={opacity} scale={scale} />
             ))}
 
             {/* The Core System */}

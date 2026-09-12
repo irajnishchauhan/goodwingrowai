@@ -82,7 +82,7 @@ export const PlatformModules = () => {
               
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex justify-between items-start mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-surface border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-accent/50 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-surface border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-accent/50 transition duration-300 ease-emil">
                     {mod.icon}
                   </div>
                   <span className="text-3xl font-bold text-white/5">{mod.id}</span>

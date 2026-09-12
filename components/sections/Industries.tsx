@@ -54,7 +54,7 @@ export const Industries = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group glass p-8 rounded-2xl cursor-pointer hover:bg-surface/80 transition-all duration-300"
+              className="group glass p-8 rounded-2xl cursor-pointer hover:bg-surface/80 transition-colors duration-normal ease-emil"
             >
               <h3 className="text-2xl font-bold text-foreground mb-6 group-hover:text-accent transition-colors">{ind.name}</h3>
               

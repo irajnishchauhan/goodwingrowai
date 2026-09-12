@@ -75,12 +75,12 @@ export const GrowthAudit = () => {
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div className="flex flex-col gap-2 group">
                   <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Website</label>
-                  <input required name="website" type="url" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-normal ease-emil" placeholder="https://example.com" />
+                  <input required name="website" type="url" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-colors duration-normal ease-emil" placeholder="https://example.com" />
                 </div>
                 
                 <div className="flex flex-col gap-2 group">
                   <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Industry</label>
-                  <select required name="industry" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-normal ease-emil appearance-none">
+                  <select required name="industry" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-colors duration-normal ease-emil appearance-none">
                     <option value="">Select Industry</option>
                     <option value="healthcare">Healthcare</option>
                     <option value="realestate">Real Estate</option>
@@ -96,7 +96,7 @@ export const GrowthAudit = () => {
 
                 <div className="flex flex-col gap-2 group">
                   <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Monthly Marketing Spend</label>
-                  <select required name="spend" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-normal ease-emil appearance-none">
+                  <select required name="spend" className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-colors duration-normal ease-emil appearance-none">
                     <option value="">Select Range</option>
                     <option value="under5k">Under $5,000</option>
                     <option value="5k_20k">$5,000 - $20,000</option>
@@ -107,7 +107,7 @@ export const GrowthAudit = () => {
 
                 <div className="flex flex-col gap-2 group">
                   <label className="text-xs uppercase tracking-wider text-secondary font-medium group-focus-within:text-accent transition-colors">Primary Goal</label>
-                  <textarea required name="goal" rows={3} className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-normal ease-emil resize-none" placeholder="e.g. Decrease CAC, scale lead volume, automate workflows..."></textarea>
+                  <textarea required name="goal" rows={3} className="bg-surface/80 border border-white/10 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-colors duration-normal ease-emil resize-none" placeholder="e.g. Decrease CAC, scale lead volume, automate workflows..."></textarea>
                 </div>
                 
                 <GlowButton variant="primary" type="submit" className="w-full mt-4 py-4">

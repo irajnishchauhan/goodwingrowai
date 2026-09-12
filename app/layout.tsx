@@ -20,7 +20,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Goodwin Grow AI | AI-Powered Marketing & Growth",
-  description: "Goodwin Grow AI helps businesses grow with AI-powered marketing, performance advertising, SEO, AEO, GEO, automation and analytics.",
+  description: "Goodwin Grow AI combines AI, performance marketing, automation and analytics to help businesses acquire customers, improve conversion and scale efficiently.",
   keywords: ["AI Marketing", "Growth Agency", "Performance Marketing", "AI Automation", "Lead Generation", "SEO", "Next.js"],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     title: "Goodwin Grow AI | AI-Powered Marketing & Growth",
-    description: "Goodwin Grow AI helps businesses grow with AI-powered marketing, performance advertising, SEO, AEO, GEO, automation and analytics.",
+    description: "Goodwin Grow AI combines AI, performance marketing, automation and analytics to help businesses acquire customers, improve conversion and scale efficiently.",
     siteName: siteConfig.name,
   },
   twitter: {
     card: "summary_large_image",
     title: "Goodwin Grow AI | AI-Powered Marketing & Growth",
-    description: "Goodwin Grow AI helps businesses grow with AI-powered marketing, performance advertising, SEO, AEO, GEO, automation and analytics.",
+    description: "Goodwin Grow AI combines AI, performance marketing, automation and analytics to help businesses acquire customers, improve conversion and scale efficiently.",
   },
 };
 
