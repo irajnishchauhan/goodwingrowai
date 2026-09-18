@@ -7,7 +7,9 @@ import { SystemPipeline } from "@/components/sections/SystemPipeline";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Industries } from "@/components/sections/Industries";
 import { Outcomes } from "@/components/sections/Outcomes";
+import { Pricing } from "@/components/sections/Pricing";
 import { GrowthAudit } from "@/components/sections/GrowthAudit";
+import { Blog } from "@/components/sections/Blog";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export default function Home() {
@@ -22,7 +24,9 @@ export default function Home() {
       <HowItWorks />
       <Industries />
       <Outcomes />
+      <Pricing />
       <GrowthAudit />
+      <Blog />
       <FinalCta />
     </>
   );
