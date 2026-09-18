@@ -37,10 +37,10 @@ export const Hero = () => {
             initial={{ opacity: 0, scale: 0.98, filter: "blur(4px)" }}
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05]"
+            className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-foreground leading-[1.05]"
           >
             Turn AI into <br className="hidden sm:block"/>
-            <span className="text-accent/90">measurable growth.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">measurable growth.</span>
           </motion.h1>
 
           <motion.p 

@@ -9,12 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0A",
-        foreground: "#F7F7F2",
-        primary: "#F7F7F2",
-        secondary: "#A6A6A0",
-        accent: "#B8FF3D",
-        surface: "#111311",
+        background: "var(--color-background)",
+        foreground: "var(--color-foreground)",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        accent: "var(--color-accent)",
+        surface: "var(--color-surface)",
+        muted: "var(--color-muted)",
+        ring: "var(--color-ring)",
+      },
+      fontFamily: {
+        sans: ['var(--font-sans)', 'sans-serif'],
+        display: ['var(--font-display)', 'sans-serif'],
       },
       borderColor: {
         DEFAULT: "rgba(255, 255, 255, 0.10)",

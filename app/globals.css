@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0A0A0A;
-  --color-foreground: #F7F7F2;
-  --color-primary: #F7F7F2;
-  --color-secondary: #A6A6A0;
-  --color-accent: #B8FF3D;
-  --color-surface: #111311;
+  --color-background: #020617;
+  --color-foreground: #F8FAFC;
+  --color-primary: #7C3AED;
+  --color-secondary: #A78BFA;
+  --color-accent: #0891B2;
+  --color-surface: #0F172A;
+  --color-muted: #1E293B;
+  --color-ring: #7C3AED;
+  
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   
   /* Emil Kowalski inspired easing tokens */
   --ease-emil: cubic-bezier(0.16, 1, 0.3, 1);
@@ -17,8 +21,8 @@
 
 @layer base {
   :root {
-    --background: #0A0A0A;
-    --foreground: #F7F7F2;
+    --background: #020617;
+    --foreground: #F8FAFC;
     --duration-fast: 150ms;
     --duration-normal: 250ms;
     --duration-slow: 400ms;
@@ -30,8 +34,8 @@
     -webkit-font-smoothing: antialiased;
   }
   ::selection {
-    background-color: #B8FF3D;
-    color: #0A0A0A;
+    background-color: #7C3AED;
+    color: #FFFFFF;
   }
   
   /* Reduced motion support */
@@ -49,14 +53,14 @@
 
 @layer utilities {
   .glass {
-    background-color: rgba(17, 19, 17, 0.7);
+    background-color: rgba(15, 23, 42, 0.7);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.15);
   }
   .text-glow {
-    text-shadow: 0 0 20px rgba(184, 255, 61, 0.3);
+    text-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
   }
   .box-glow {
-    box-shadow: 0 0 30px rgba(184, 255, 61, 0.1);
+    box-shadow: 0 0 30px rgba(8, 145, 178, 0.15);
   }
 }
