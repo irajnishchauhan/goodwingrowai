@@ -9,7 +9,7 @@ const pricingPlans = [
   {
     name: "Starter",
     description: "Perfect for small businesses getting started with AI marketing.",
-    price: "$997",
+    price: "₹79,997",
     period: "/mo",
     features: [
       "AI Growth Audit",
@@ -22,7 +22,7 @@ const pricingPlans = [
   {
     name: "Pro",
     description: "For growing businesses ready to scale with full automation.",
-    price: "$2,497",
+    price: "₹1,99,997",
     period: "/mo",
     features: [
       "Everything in Starter",

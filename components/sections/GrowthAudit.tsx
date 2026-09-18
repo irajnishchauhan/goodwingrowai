@@ -100,10 +100,10 @@ export const GrowthAudit = () => {
                   <label className="text-xs uppercase tracking-widest text-secondary font-semibold group-focus-within:text-accent transition-colors duration-300">Monthly Ad Spend</label>
                   <select required name="spend" className="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil appearance-none">
                     <option value="">Select Investment Range</option>
-                    <option value="under5k">Under $5k (Scaling Phase)</option>
-                    <option value="5k_20k">$5k - $20k (Growth Phase)</option>
-                    <option value="20k_50k">$20k - $50k (Acceleration)</option>
-                    <option value="over50k">$50k+ (Enterprise)</option>
+                    <option value="under50k">Under ₹50k (Scaling Phase)</option>
+                    <option value="50k_2l">₹50k - ₹2L (Growth Phase)</option>
+                    <option value="2l_5l">₹2L - ₹5L (Acceleration)</option>
+                    <option value="over5l">₹5L+ (Enterprise)</option>
                   </select>
                 </div>
 
