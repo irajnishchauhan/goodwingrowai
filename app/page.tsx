@@ -10,6 +10,7 @@ import { Outcomes } from "@/components/sections/Outcomes";
 import { Pricing } from "@/components/sections/Pricing";
 import { GrowthAudit } from "@/components/sections/GrowthAudit";
 import { Blog } from "@/components/sections/Blog";
+import { Contact } from "@/components/sections/Contact";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <Pricing />
       <GrowthAudit />
       <Blog />
+      <Contact />
       <FinalCta />
     </>
   );
