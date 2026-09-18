@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import Image from "next/image";
 
 const stages = [
   { id: 1, name: "Acquisition" },
@@ -32,14 +33,15 @@ export const TheSolution = () => {
 
           {/* Central Node */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="relative flex items-center justify-center w-40 h-40">
+            <div className="relative flex items-center justify-center w-64 h-64">
               <motion.div 
                 animate={{ rotate: 360 }} 
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 rounded-full border border-dashed border-accent/30"
               />
-              <div className="glass border-accent/40 rounded-full w-32 h-32 flex flex-col items-center justify-center text-center shadow-[0_0_30px_rgba(184,255,61,0.15)] box-glow">
-                <span className="text-sm font-bold text-foreground leading-tight tracking-widest">
+              <div className="relative w-48 h-48 rounded-full shadow-[0_0_50px_rgba(184,255,61,0.3)] box-glow overflow-hidden flex items-center justify-center border border-accent/40">
+                <Image src="/images/solution_core.jpg" alt="Core Engine" fill className="object-cover opacity-80" />
+                <span className="relative z-10 text-sm font-bold text-white drop-shadow-md leading-tight tracking-widest text-center">
                   GOODWIN<br/>GROW AI
                 </span>
               </div>

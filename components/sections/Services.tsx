@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import Image from "next/image";
 import { ArrowRight, Brain, Target, Users, Zap, BarChart3, ArrowUpRight, Lightbulb } from "lucide-react";
 
 const capabilities = [
@@ -121,21 +122,38 @@ export const Services = () => {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-0 bg-background border border-white/5 rounded-2xl p-8 md:p-12 flex flex-col box-glow"
+                className="absolute inset-0 bg-background border border-white/5 rounded-2xl p-8 md:p-12 flex flex-col box-glow overflow-hidden"
               >
+                <Image 
+                  src="/images/services_ai.jpg" 
+                  alt="AI Services" 
+                  fill 
+                  className="object-cover opacity-10 pointer-events-none mix-blend-screen" 
+                />
                 
-                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border ${activeCapability.color}`}>
+                {/* Background Video Placeholder */}
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-screen pointer-events-none"
+                >
+                  <source src="/videos/services-bg.mp4" type="video/mp4" />
+                </video>
+                
+                <div className={`relative z-10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border ${activeCapability.color}`}>
                   <ActiveIcon className="w-8 h-8" />
                 </div>
 
-                <h3 className="text-3xl font-bold text-foreground mb-4">{activeCapability.name}</h3>
+                <h3 className="relative z-10 text-3xl font-bold text-foreground mb-4">{activeCapability.name}</h3>
                 
-                <p className="text-lg text-secondary leading-relaxed max-w-xl mb-12">
+                <p className="relative z-10 text-lg text-secondary leading-relaxed max-w-xl mb-12">
                   {activeCapability.description}
                 </p>
 
                 {/* Simulated Data/Metric Block */}
-                <div className="mt-auto bg-surface border border-white/5 rounded-xl p-6 flex items-center justify-between">
+                <div className="relative z-10 mt-auto bg-surface border border-white/5 rounded-xl p-6 flex items-center justify-between">
                   <div>
                     <span className="block text-xs font-mono text-secondary uppercase tracking-widest mb-1">Impact Metric</span>
                     <span className="block text-sm font-medium text-foreground">{activeCapability.metricLabel}</span>

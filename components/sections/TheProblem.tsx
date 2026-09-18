@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import Image from "next/image";
 
 function ToolNode({ tool, progress, opacity, scale }: { tool: { label: string, x: number, y: number, color: string }, progress: MotionValue<number>, opacity: MotionValue<number>, scale: MotionValue<number> }) {
   const x = useTransform(progress, [0, 1], [tool.x, 0]);
@@ -55,6 +56,9 @@ export const TheProblem = () => {
           
           {/* Visualization Container */}
           <div className="relative w-full max-w-3xl aspect-square md:aspect-[2/1] mt-32 md:mt-24">
+            <motion.div style={{ opacity }} className="absolute inset-0 z-0">
+               <Image src="/images/problem_chaos.jpg" alt="Fragmented Data" fill className="object-cover opacity-30 mix-blend-screen rounded-2xl pointer-events-none" />
+            </motion.div>
             
             {/* The Disconnected Tools */}
             {[

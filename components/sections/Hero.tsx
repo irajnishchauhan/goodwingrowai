@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { GlowButton } from "@/components/ui/GlowButton";
 import { ArrowRight, BarChart3, Zap, Activity } from "lucide-react";
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
 export const Hero = () => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -16,6 +16,17 @@ export const Hero = () => {
       
       {/* Background subtle noise/grid can go here, but keeping it minimal and dark */}
       <div className="absolute inset-0 bg-background -z-20" />
+      
+      {/* Background Video Placeholder */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-20 -z-[15] mix-blend-screen pointer-events-none"
+      >
+        <source src="/videos/hero-bg.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] -z-10 opacity-50" />
 
       <div className="container relative z-10 mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-16 xl:gap-24">
@@ -81,6 +92,12 @@ export const Hero = () => {
               className="relative w-full aspect-[4/5] sm:aspect-square bg-surface/40 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden shadow-2xl"
             >
               <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+              <Image 
+                src="/images/hero_dashboard.jpg" 
+                alt="AI Growth Dashboard" 
+                fill 
+                className="object-cover opacity-40 mix-blend-screen pointer-events-none" 
+              />
               
               {/* Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/[0.02]">

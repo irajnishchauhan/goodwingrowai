@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import Image from "next/image";
 
 const steps = [
   {
@@ -49,6 +50,12 @@ export const HowItWorks = () => {
   return (
     <section id="how-we-work" ref={containerRef} className="bg-surface h-[300vh] relative border-t border-white/5">
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden pt-20">
+        <Image 
+          src="/images/how_it_works_nodes.jpg"
+          alt="Abstract nodes"
+          fill
+          className="object-cover opacity-10 pointer-events-none mix-blend-screen"
+        />
         
         <div className="container mx-auto px-6 mb-10">
           <SectionHeading 
