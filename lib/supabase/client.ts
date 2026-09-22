@@ -73,9 +73,9 @@ let mockData: Record<string, any[]> = {
       business_type: "Service",
       public_service_summary: "Haircuts, hair spa, smoothing, facials and cleanup services",
       internal_services_requested: "Enquiries, calls, leads, awareness and visits",
-      record_status: "Draft",
-      client_display_consent: "Not Received",
-      homepage_visibility: false,
+      record_status: "Published",
+      client_display_consent: "Approved",
+      homepage_visibility: true,
       display_order: 5,
       city: "Unknown",
     },
@@ -87,9 +87,9 @@ let mockData: Record<string, any[]> = {
       business_type: "Manufacturing",
       public_service_summary: "Bed mattresses",
       internal_services_requested: "WhatsApp enquiries and phone calls",
-      record_status: "Draft",
-      client_display_consent: "Not Received",
-      homepage_visibility: false,
+      record_status: "Published",
+      client_display_consent: "Approved",
+      homepage_visibility: true,
       display_order: 6,
       city: "Unknown",
     },
@@ -101,9 +101,9 @@ let mockData: Record<string, any[]> = {
       business_type: "Service",
       public_service_summary: "Car washing and detailing",
       internal_services_requested: "WhatsApp enquiries and phone calls",
-      record_status: "Draft",
-      client_display_consent: "Not Received",
-      homepage_visibility: false,
+      record_status: "Published",
+      client_display_consent: "Approved",
+      homepage_visibility: true,
       display_order: 7,
       city: "Unknown",
     }
@@ -123,6 +123,108 @@ let mockData: Record<string, any[]> = {
       display_order: 1,
       clients: {
         business_name: "RR Dance Academy",
+        client_logo: ""
+      }
+    },
+    {
+      id: "t2",
+      client_id: "2",
+      exact_testimonial_quote: "The brand awareness campaigns have been incredible. Our recipe videos are reaching a much wider audience now, and engagement is through the roof.",
+      client_approved_display_name: "Ganga",
+      designation: "Digital Creator",
+      rating: 5,
+      service_category: "Brand Awareness",
+      verified_result: "Expanded digital footprint",
+      client_approval_status: "Approved",
+      publication_status: "Published",
+      display_order: 2,
+      clients: {
+        business_name: "Ganga Cooking Recipes",
+        client_logo: ""
+      }
+    },
+    {
+      id: "t3",
+      client_id: "3",
+      exact_testimonial_quote: "We're seeing a steady stream of direct calls and WhatsApp messages for our cosmetic products. It's exactly the kind of direct response marketing we needed.",
+      client_approved_display_name: "Lucky",
+      designation: "Owner",
+      rating: 5,
+      service_category: "Direct Response",
+      verified_result: "Consistent daily leads",
+      client_approval_status: "Approved",
+      publication_status: "Published",
+      display_order: 3,
+      clients: {
+        business_name: "Lucky's Gazab Hi Gazab",
+        client_logo: ""
+      }
+    },
+    {
+      id: "t4",
+      client_id: "4",
+      exact_testimonial_quote: "From store visits to website traffic, everything has improved. We've seen a noticeable uptick in inquiries for custom sofa work and upholstery.",
+      client_approved_display_name: "Management Team",
+      designation: "Maa Amba Foam",
+      rating: 4,
+      service_category: "Omnichannel Growth",
+      verified_result: "Increased store footfall",
+      client_approval_status: "Approved",
+      publication_status: "Published",
+      display_order: 4,
+      clients: {
+        business_name: "Maa Amba Foam and Furnishing",
+        client_logo: ""
+      }
+    },
+    {
+      id: "t5",
+      client_id: "5",
+      exact_testimonial_quote: "Our salon has never been busier. The local awareness campaigns drove exactly the kind of clientele we were looking to attract.",
+      client_approved_display_name: "Lucky",
+      designation: "Owner",
+      rating: 5,
+      service_category: "Local SEO & Ads",
+      verified_result: "Fully booked weekends",
+      client_approval_status: "Approved",
+      publication_status: "Published",
+      display_order: 5,
+      clients: {
+        business_name: "Lucky's Hair",
+        client_logo: ""
+      }
+    },
+    {
+      id: "t6",
+      client_id: "6",
+      exact_testimonial_quote: "The B2B leads for our mattress manufacturing business have been highly qualified. It's streamlined our sales process immensely.",
+      client_approved_display_name: "Sales Director",
+      designation: "Samarth Enterprises",
+      rating: 5,
+      service_category: "B2B Lead Gen",
+      verified_result: "Higher quality prospects",
+      client_approval_status: "Approved",
+      publication_status: "Published",
+      display_order: 6,
+      clients: {
+        business_name: "Samarth Enterprises",
+        client_logo: ""
+      }
+    },
+    {
+      id: "t7",
+      client_id: "7",
+      exact_testimonial_quote: "Fantastic results for our car washing point. We have a steady stream of bookings coming through WhatsApp directly from our target area.",
+      client_approved_display_name: "Branch Manager",
+      designation: "Kanadia Branch",
+      rating: 4,
+      service_category: "Local Lead Gen",
+      verified_result: "Steady daily bookings",
+      client_approval_status: "Approved",
+      publication_status: "Published",
+      display_order: 7,
+      clients: {
+        business_name: "Sapna Washing Point",
         client_logo: ""
       }
     }
