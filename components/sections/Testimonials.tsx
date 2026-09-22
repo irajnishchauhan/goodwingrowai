@@ -57,8 +57,7 @@ export const Testimonials = () => {
         <SectionHeading 
           title="What Our Clients Say" 
           subtitle="Real feedback from businesses that have transformed their growth systems with us." 
-          badge="Testimonials"
-          alignment="center"
+          align="center"
         />
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

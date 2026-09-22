@@ -33,8 +33,7 @@ export default async function ClientStoriesPage() {
           <SectionHeading 
             title="Client Stories" 
             subtitle="Explore how we have partnered with businesses to transform their digital growth." 
-            badge="Case Studies"
-            alignment="left"
+            align="left"
           />
         </div>
 
@@ -44,7 +43,7 @@ export default async function ClientStoriesPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((cs) => (
+            {caseStudies.map((cs: any) => (
               <Link href={`/client-stories/${cs.slug}`} key={cs.id} className="group flex flex-col h-full bg-white/[0.02] border border-white/5 rounded-2xl overflow-hidden hover:bg-white/[0.04] transition-colors">
                 <div className="relative h-48 w-full bg-surface border-b border-white/5 overflow-hidden">
                   {cs.featured_image ? (

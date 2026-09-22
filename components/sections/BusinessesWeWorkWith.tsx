@@ -60,8 +60,7 @@ export const BusinessesWeWorkWith = () => {
         <SectionHeading 
           title="Businesses We Work With" 
           subtitle="Supporting ambitious businesses across service, retail and manufacturing sectors with practical digital growth solutions." 
-          badge="Social Proof"
-          alignment="center"
+          align="center"
         />
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
