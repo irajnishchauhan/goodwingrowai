@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { GlowButton } from "@/components/ui/GlowButton";
-import { LogOut, Save } from "lucide-react";
+import { LogOut, Save, Users } from "lucide-react";
+import Link from "next/link";
 
 export const AdminDashboard = () => {
   const [config, setConfig] = useState<any>(null);
@@ -56,9 +57,14 @@ export const AdminDashboard = () => {
       {/* Top Navbar */}
       <header className="bg-surface border-b border-white/5 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
         <h1 className="text-xl font-display font-bold">Goodwin Grow AI <span className="text-accent ml-2 text-sm uppercase tracking-widest font-normal">Admin Panel</span></h1>
-        <button onClick={handleLogout} className="flex items-center gap-2 text-sm text-secondary hover:text-destructive transition-colors">
-          <LogOut className="w-4 h-4" /> Logout
-        </button>
+        <div className="flex items-center gap-6">
+          <Link href="/admin/clients" className="flex items-center gap-2 text-sm text-secondary hover:text-foreground transition-colors">
+            <Users className="w-4 h-4" /> Clients & Testimonials
+          </Link>
+          <button onClick={handleLogout} className="flex items-center gap-2 text-sm text-secondary hover:text-destructive transition-colors">
+            <LogOut className="w-4 h-4" /> Logout
+          </button>
+        </div>
       </header>
 
       <main className="container mx-auto px-6 md:px-12 py-12 max-w-4xl">

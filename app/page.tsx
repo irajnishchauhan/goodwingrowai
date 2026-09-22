@@ -12,6 +12,8 @@ import { GrowthAudit } from "@/components/sections/GrowthAudit";
 import { Blog } from "@/components/sections/Blog";
 import { Contact } from "@/components/sections/Contact";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { BusinessesWeWorkWith } from "@/components/sections/BusinessesWeWorkWith";
+import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
@@ -25,6 +27,8 @@ export default function Home() {
       <HowItWorks />
       <Industries />
       <Outcomes />
+      <BusinessesWeWorkWith />
+      <Testimonials />
       <Pricing />
       <GrowthAudit />
       <Blog />
