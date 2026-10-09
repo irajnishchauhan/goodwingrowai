@@ -38,17 +38,17 @@ export const Navbar = () => {
     <>
       <motion.header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/80 backdrop-blur-xl border-b border-white/5 py-4" : "bg-transparent py-6"
+          isScrolled ? "bg-background/80 backdrop-blur-xl border-b border-foreground/5 py-4" : "bg-transparent py-6"
         }`}
       >
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
           
           <div className="flex items-center gap-6">
             <Link href="/" className="relative z-50 flex items-center group">
-              <GoodwinLogo variant="horizontal" theme="dark" size="md" className="mr-2" />
+              <GoodwinLogo variant="horizontal" theme="light" size="md" className="mr-2" />
             </Link>
             {/* AI Status Indicator */}
-            <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-white/10 text-xs font-medium whitespace-nowrap">
+            <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-foreground/10 text-xs font-medium whitespace-nowrap">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
@@ -103,7 +103,7 @@ export const Navbar = () => {
               key={link.name} 
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-foreground border-b border-white/10 pb-4"
+              className="text-foreground border-b border-foreground/10 pb-4"
             >
               {link.name}
             </Link>

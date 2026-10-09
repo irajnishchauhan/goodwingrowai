@@ -12,7 +12,7 @@ const pillars = [
 
 export const TrustBar = () => {
   return (
-    <section className="py-16 md:py-20 border-y border-white/5 bg-background overflow-hidden relative">
+    <section className="py-16 md:py-20 border-y border-foreground/5 bg-background overflow-hidden relative">
       <div className="absolute inset-0 bg-surface/30 -z-10" />
       
       <div className="container mx-auto px-6 flex flex-col items-center text-center">
@@ -37,7 +37,7 @@ export const TrustBar = () => {
               transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="flex items-center gap-3"
             >
-              <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
+              <div className="w-1.5 h-1.5 rounded-full bg-foreground/20" />
               <span className="text-sm md:text-base font-semibold tracking-wide text-secondary uppercase">
                 {pillar}
               </span>

@@ -51,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark" style={{ colorScheme: 'dark' }}>
+    <html lang="en" className="light" style={{ colorScheme: 'light' }}>
       <body className={`${dmSans.variable} ${spaceGrotesk.variable} font-sans antialiased bg-background text-foreground flex flex-col min-h-screen`}>
         <Navbar />
         <main className="flex-grow flex flex-col relative z-10">

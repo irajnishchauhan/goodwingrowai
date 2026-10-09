@@ -33,27 +33,27 @@ const footerLinks = {
 
 export const Footer = () => {
   return (
-    <footer className="bg-background border-t border-white/5 pt-20 pb-10">
+    <footer className="bg-background border-t border-foreground/5 pt-20 pb-10">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 mb-16">
           <div className="col-span-2 lg:col-span-2">
             <Link href="/" className="mb-6 inline-block">
-              <GoodwinLogo variant="stacked" theme="dark" size="lg" />
+              <GoodwinLogo variant="stacked" theme="light" size="lg" />
             </Link>
             <p className="text-secondary mb-6 max-w-sm">
               AI-powered growth for ambitious businesses.
             </p>
             <div className="flex flex-col gap-3 text-sm text-secondary">
               <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-accent transition-colors flex items-center gap-2">
-                <span className="w-6 h-6 flex items-center justify-center bg-white/5 rounded-md text-base">📧</span>
+                <span className="w-6 h-6 flex items-center justify-center bg-foreground/5 rounded-md text-base">📧</span>
                 {siteConfig.contact.email}
               </a>
               <a href={`tel:${siteConfig.contact.phone}`} className="hover:text-accent transition-colors flex items-center gap-2">
-                <span className="w-6 h-6 flex items-center justify-center bg-white/5 rounded-md text-base">📞</span>
+                <span className="w-6 h-6 flex items-center justify-center bg-foreground/5 rounded-md text-base">📞</span>
                 {siteConfig.contact.phone}
               </a>
               <a href={siteConfig.contact.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors flex items-center gap-2">
-                <span className="w-6 h-6 flex items-center justify-center bg-white/5 rounded-md text-base">💬</span>
+                <span className="w-6 h-6 flex items-center justify-center bg-foreground/5 rounded-md text-base">💬</span>
                 WhatsApp Us
               </a>
             </div>
@@ -112,7 +112,7 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-secondary text-sm text-center md:text-left">
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>

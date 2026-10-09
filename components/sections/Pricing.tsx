@@ -66,7 +66,7 @@ export const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className={`relative bg-surface/40 backdrop-blur-md rounded-2xl border ${plan.popular ? 'border-primary/50' : 'border-white/10'} p-8 flex flex-col`}
+              className={`relative bg-surface/40 backdrop-blur-md rounded-2xl border ${plan.popular ? 'border-primary/50' : 'border-foreground/10'} p-8 flex flex-col`}
             >
               {plan.popular && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 py-1 bg-primary text-white text-xs font-bold uppercase tracking-wider rounded-full">

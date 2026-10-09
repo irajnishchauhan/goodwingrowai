@@ -68,7 +68,7 @@ const capabilities = [
     description: "Fractional CMO-level guidance. We audit your business, identify growth levers, and build the roadmap to scale efficiently.",
     metric: "Target",
     metricLabel: "Alignment Achieved",
-    color: "bg-white/5 text-foreground border-white/10"
+    color: "bg-foreground/5 text-foreground border-foreground/10"
   }
 ];
 
@@ -101,8 +101,8 @@ export const Services = () => {
                 onClick={() => setActiveId(cap.id)}
                 className={`text-left px-6 py-4 rounded-xl transition-all duration-300 ease-emil flex items-center justify-between group ${
                   activeId === cap.id 
-                    ? "bg-white/10 border-white/10 text-foreground shadow-lg" 
-                    : "bg-transparent border-transparent text-secondary hover:text-foreground hover:bg-white/5"
+                    ? "bg-foreground/10 border-foreground/10 text-foreground shadow-lg" 
+                    : "bg-transparent border-transparent text-secondary hover:text-foreground hover:bg-foreground/5"
                 } border`}
               >
                 <span className="text-lg font-semibold">{cap.name}</span>
@@ -122,7 +122,7 @@ export const Services = () => {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-0 bg-background border border-white/5 rounded-2xl p-8 md:p-12 flex flex-col box-glow overflow-hidden"
+                className="absolute inset-0 bg-background border border-foreground/5 rounded-2xl p-8 md:p-12 flex flex-col box-glow overflow-hidden"
               >
                 <Image 
                   src="/images/services_ai.jpg" 
@@ -153,7 +153,7 @@ export const Services = () => {
                 </p>
 
                 {/* Simulated Data/Metric Block */}
-                <div className="relative z-10 mt-auto bg-surface border border-white/5 rounded-xl p-6 flex items-center justify-between">
+                <div className="relative z-10 mt-auto bg-surface border border-foreground/5 rounded-xl p-6 flex items-center justify-between">
                   <div>
                     <span className="block text-xs font-mono text-secondary uppercase tracking-widest mb-1">Impact Metric</span>
                     <span className="block text-sm font-medium text-foreground">{activeCapability.metricLabel}</span>

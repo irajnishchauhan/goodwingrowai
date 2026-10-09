@@ -28,7 +28,7 @@ const industries = [
 
 export const Industries = () => {
   return (
-    <section id="industries" className="py-32 bg-background border-t border-white/5">
+    <section id="industries" className="py-32 bg-background border-t border-foreground/5">
       <div className="container mx-auto px-6">
         
         <div className="mb-20">
@@ -39,11 +39,11 @@ export const Industries = () => {
           />
         </div>
 
-        <div className="max-w-4xl border-t border-white/10">
+        <div className="max-w-4xl border-t border-foreground/10">
           {industries.map((ind, i) => (
             <div 
               key={ind.name}
-              className="border-b border-white/10 py-8 relative group"
+              className="border-b border-foreground/10 py-8 relative group"
             >
               <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-12">
                 <h3 className="text-2xl md:text-3xl font-medium text-foreground md:w-1/3 transition-colors duration-300 group-hover:text-accent">

@@ -48,7 +48,7 @@ export const HowItWorks = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
   return (
-    <section id="how-we-work" ref={containerRef} className="bg-surface h-[300vh] relative border-t border-white/5">
+    <section id="how-we-work" ref={containerRef} className="bg-surface h-[300vh] relative border-t border-foreground/5">
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden pt-20">
         <Image 
           src="/images/how_it_works_nodes.jpg"
@@ -70,7 +70,7 @@ export const HowItWorks = () => {
             <div key={step.num} className="w-[300px] md:w-[450px] shrink-0">
               <div className="text-accent text-6xl md:text-8xl font-black opacity-10 mb-6 font-mono tracking-tighter">{step.num}</div>
               
-              <div className="relative pl-8 border-l border-white/10 h-full">
+              <div className="relative pl-8 border-l border-foreground/10 h-full">
                 {/* Animated line dot indicator */}
                 <motion.div 
                   className="absolute top-0 -left-[5px] w-2.5 h-2.5 rounded-full bg-accent"

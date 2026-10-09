@@ -76,14 +76,14 @@ export const Testimonials = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 relative flex flex-col h-full"
+                className="bg-white/[0.02] border border-foreground/5 rounded-2xl p-8 relative flex flex-col h-full"
               >
-                <Quote className="absolute top-6 right-6 w-12 h-12 text-white/5 -z-10" />
+                <Quote className="absolute top-6 right-6 w-12 h-12 text-foreground/5 -z-10" />
                 
                 {t.rating && (
                   <div className="flex gap-1 mb-6">
                     {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className={`w-4 h-4 ${i < t.rating ? "text-amber-400 fill-amber-400" : "text-white/10"}`} />
+                      <Star key={i} className={`w-4 h-4 ${i < t.rating ? "text-amber-400 fill-amber-400" : "text-foreground/10"}`} />
                     ))}
                   </div>
                 )}
@@ -98,8 +98,8 @@ export const Testimonials = () => {
                   </div>
                 )}
 
-                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/5">
-                  <div className="w-12 h-12 rounded-full bg-surface border border-white/10 flex items-center justify-center shrink-0 overflow-hidden relative">
+                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-foreground/5">
+                  <div className="w-12 h-12 rounded-full bg-surface border border-foreground/10 flex items-center justify-center shrink-0 overflow-hidden relative">
                     {logo ? (
                       <Image 
                         src={logo} 

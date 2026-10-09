@@ -16,7 +16,7 @@ const pipelineSteps = [
 
 export const SystemPipeline = () => {
   return (
-    <section className="py-32 bg-background border-t border-white/5 relative overflow-hidden">
+    <section className="py-32 bg-background border-t border-foreground/5 relative overflow-hidden">
       
       {/* Background elements */}
       <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-accent/5 to-transparent pointer-events-none" />
@@ -34,10 +34,10 @@ export const SystemPipeline = () => {
         <div className="relative">
           
           {/* Connecting Line Desktop */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-white/10 -translate-y-1/2 z-0" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-foreground/10 -translate-y-1/2 z-0" />
           
           {/* Connecting Line Mobile */}
-          <div className="lg:hidden absolute left-[31px] top-0 bottom-0 w-px bg-white/10 z-0" />
+          <div className="lg:hidden absolute left-[31px] top-0 bottom-0 w-px bg-foreground/10 z-0" />
 
           <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-4 relative z-10">
             {pipelineSteps.map((step, i) => (
@@ -51,7 +51,7 @@ export const SystemPipeline = () => {
               >
                 {/* Node Icon */}
                 <div className="relative">
-                  <div className="w-16 h-16 rounded-2xl bg-surface border border-white/10 flex items-center justify-center relative z-10 group-hover:border-accent/50 transition-colors duration-300">
+                  <div className="w-16 h-16 rounded-2xl bg-surface border border-foreground/10 flex items-center justify-center relative z-10 group-hover:border-accent/50 transition-colors duration-300">
                     <step.icon className="w-6 h-6 text-secondary group-hover:text-accent transition-colors duration-300" />
                   </div>
                   {/* Pulse effect */}

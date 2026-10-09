@@ -47,9 +47,9 @@ export const Outcomes = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-background border border-white/5 p-8 rounded-2xl flex flex-col items-start gap-4 hover:border-accent/30 transition-colors duration-300"
+              className="bg-background border border-foreground/5 p-8 rounded-2xl flex flex-col items-start gap-4 hover:border-accent/30 transition-colors duration-300"
             >
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-accent mb-2">
+              <div className="w-12 h-12 rounded-full bg-foreground/5 flex items-center justify-center text-accent mb-2">
                 <outcome.icon className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-foreground">{outcome.title}</h3>

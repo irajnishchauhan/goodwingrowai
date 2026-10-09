@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #020617;
-  --color-foreground: #F8FAFC;
-  --color-primary: #7C3AED;
-  --color-secondary: #A78BFA;
-  --color-accent: #0891B2;
-  --color-surface: #0F172A;
-  --color-muted: #1E293B;
-  --color-ring: #7C3AED;
+  --color-background: #FFFFFF;
+  --color-foreground: #111111;
+  --color-primary: #FF3B00;
+  --color-secondary: #4A4A4A;
+  --color-accent: #FF3B00;
+  --color-surface: #F9FAFB;
+  --color-muted: #6B7280;
+  --color-ring: #FF3B00;
   
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
@@ -21,8 +21,8 @@
 
 @layer base {
   :root {
-    --background: #020617;
-    --foreground: #F8FAFC;
+    --background: #FFFFFF;
+    --foreground: #111111;
     --duration-fast: 150ms;
     --duration-normal: 250ms;
     --duration-slow: 400ms;
@@ -53,14 +53,18 @@
 
 @layer utilities {
   .glass {
-    background-color: rgba(15, 23, 42, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(124, 58, 237, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
   .text-glow {
     text-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
   }
   .box-glow {
     box-shadow: 0 0 30px rgba(8, 145, 178, 0.15);
+  }
+  .outline-text {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
   }
 }

@@ -7,7 +7,6 @@ import { SystemPipeline } from "@/components/sections/SystemPipeline";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Industries } from "@/components/sections/Industries";
 import { Outcomes } from "@/components/sections/Outcomes";
-import { Pricing } from "@/components/sections/Pricing";
 import { GrowthAudit } from "@/components/sections/GrowthAudit";
 import { Blog } from "@/components/sections/Blog";
 import { Contact } from "@/components/sections/Contact";
@@ -29,7 +28,6 @@ export default function Home() {
       <Outcomes />
       <BusinessesWeWorkWith />
       <Testimonials />
-      <Pricing />
       <GrowthAudit />
       <Blog />
       <Contact />

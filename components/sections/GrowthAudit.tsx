@@ -25,7 +25,7 @@ export const GrowthAudit = () => {
   };
 
   return (
-    <section id="audit" className="py-24 bg-surface/30 border-y border-white/5 relative overflow-hidden">
+    <section id="audit" className="py-24 bg-surface/30 border-y border-foreground/5 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
       
       <div className="container mx-auto px-6 max-w-6xl flex flex-col lg:flex-row gap-16 items-center">
@@ -59,7 +59,7 @@ export const GrowthAudit = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true, margin: "-100px" }}
-            className="glass rounded-3xl p-8 md:p-10 border-white/10 relative overflow-hidden box-glow"
+            className="glass rounded-3xl p-8 md:p-10 border-foreground/10 relative overflow-hidden box-glow"
           >
             {submitted ? (
               <motion.div 
@@ -78,14 +78,26 @@ export const GrowthAudit = () => {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                <div className="flex flex-col gap-2 group relative">
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col gap-2 group relative"
+                >
                   <label className="text-xs uppercase tracking-widest text-secondary font-semibold group-focus-within:text-accent transition-colors duration-300">Target URL</label>
-                  <input required name="website" type="url" className="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3.5 text-foreground placeholder:text-white/20 focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil" placeholder="https://yourdomain.com" />
-                </div>
+                  <input required name="website" type="url" className="w-full bg-surface border border-foreground/20 rounded-xl px-4 py-3.5 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil shadow-sm" placeholder="https://yourdomain.com" />
+                </motion.div>
                 
-                <div className="flex flex-col gap-2 group relative">
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col gap-2 group relative"
+                >
                   <label className="text-xs uppercase tracking-widest text-secondary font-semibold group-focus-within:text-accent transition-colors duration-300">Industry Sector</label>
-                  <select required name="industry" className="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil appearance-none">
+                  <select required name="industry" className="w-full bg-surface border border-foreground/20 rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil appearance-none shadow-sm">
                     <option value="">Select Primary Sector</option>
                     <option value="healthcare">Healthcare & Clinics</option>
                     <option value="realestate">Real Estate & Property</option>
@@ -94,27 +106,46 @@ export const GrowthAudit = () => {
                     <option value="automotive">Automotive</option>
                     <option value="b2b">B2B SaaS & Tech</option>
                   </select>
-                </div>
+                </motion.div>
 
-                <div className="flex flex-col gap-2 group relative">
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col gap-2 group relative"
+                >
                   <label className="text-xs uppercase tracking-widest text-secondary font-semibold group-focus-within:text-accent transition-colors duration-300">Monthly Ad Spend</label>
-                  <select required name="spend" className="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil appearance-none">
+                  <select required name="spend" className="w-full bg-surface border border-foreground/20 rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil appearance-none shadow-sm">
                     <option value="">Select Investment Range</option>
                     <option value="under50k">Under ₹50k (Scaling Phase)</option>
                     <option value="50k_2l">₹50k - ₹2L (Growth Phase)</option>
                     <option value="2l_5l">₹2L - ₹5L (Acceleration)</option>
                     <option value="over5l">₹5L+ (Enterprise)</option>
                   </select>
-                </div>
+                </motion.div>
 
-                <div className="flex flex-col gap-2 group relative">
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col gap-2 group relative"
+                >
                   <label className="text-xs uppercase tracking-widest text-secondary font-semibold group-focus-within:text-accent transition-colors duration-300">Primary Objective</label>
-                  <textarea required name="goal" rows={3} className="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3.5 text-foreground placeholder:text-white/20 focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil resize-none" placeholder="E.g. Decrease CAC by 20%, scale lead volume without breaking unit economics..."></textarea>
-                </div>
+                  <textarea required name="goal" rows={3} className="w-full bg-surface border border-foreground/20 rounded-xl px-4 py-3.5 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-accent focus:bg-accent/[0.02] focus:ring-1 focus:ring-accent/50 transition-all duration-300 ease-emil resize-none shadow-sm" placeholder="E.g. Decrease CAC by 20%, scale lead volume without breaking unit economics..."></textarea>
+                </motion.div>
                 
-                <GlowButton variant="primary" type="submit" className="w-full mt-2 py-4 text-base font-semibold tracking-wide">
-                  Run Growth Diagnostic
-                </GlowButton>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <GlowButton variant="primary" type="submit" className="w-full mt-2 py-4 text-base font-semibold tracking-wide shadow-md hover:shadow-xl transition-all">
+                    Run Growth Diagnostic
+                  </GlowButton>
+                </motion.div>
               </form>
             )}
           </motion.div>

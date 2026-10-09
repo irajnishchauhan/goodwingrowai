@@ -33,7 +33,7 @@ export const Contact = () => {
               
               <div className="flex flex-col gap-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-surface/80 border border-white/10 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-surface/80 border border-foreground/10 flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5 text-accent" />
                   </div>
                   <div>
@@ -45,7 +45,7 @@ export const Contact = () => {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-surface/80 border border-white/10 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-surface/80 border border-foreground/10 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5 text-accent" />
                   </div>
                   <div>
@@ -57,7 +57,7 @@ export const Contact = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-surface/80 border border-white/10 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-surface/80 border border-foreground/10 flex items-center justify-center shrink-0">
                     <MessageSquare className="w-5 h-5 text-accent" />
                   </div>
                   <div>
@@ -69,7 +69,7 @@ export const Contact = () => {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-surface/80 border border-white/10 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-surface/80 border border-foreground/10 flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-accent" />
                   </div>
                   <div>

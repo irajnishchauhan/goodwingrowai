@@ -82,10 +82,10 @@ export const BusinessesWeWorkWith = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 hover:bg-white/[0.04] transition-colors flex flex-col h-full group relative overflow-hidden"
+                className="bg-white/[0.02] border border-foreground/5 rounded-2xl p-6 hover:bg-white/[0.04] transition-colors flex flex-col h-full group relative overflow-hidden"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-surface border border-white/10 flex items-center justify-center shrink-0 overflow-hidden relative">
+                  <div className="w-12 h-12 rounded-full bg-surface border border-foreground/10 flex items-center justify-center shrink-0 overflow-hidden relative">
                     {client.client_logo ? (
                       <Image 
                         src={client.client_logo} 
@@ -100,7 +100,7 @@ export const BusinessesWeWorkWith = () => {
                   <div>
                     <h3 className="font-bold text-foreground text-lg leading-tight">{client.business_name}</h3>
                     <div className="flex flex-wrap items-center gap-2 mt-1">
-                      <span className="text-xs text-secondary bg-white/5 px-2 py-0.5 rounded-full">{client.industry}</span>
+                      <span className="text-xs text-secondary bg-foreground/5 px-2 py-0.5 rounded-full">{client.industry}</span>
                     </div>
                   </div>
                 </div>
@@ -121,8 +121,8 @@ export const BusinessesWeWorkWith = () => {
                 </div>
 
                 {hasPublishedCaseStudy && (
-                  <div className="mt-auto pt-4 border-t border-white/5">
-                    <Link href={`/client-stories/${client.slug}`} className="text-sm font-medium text-accent hover:text-white transition-colors flex items-center gap-1">
+                  <div className="mt-auto pt-4 border-t border-foreground/5">
+                    <Link href={`/client-stories/${client.slug}`} className="text-sm font-medium text-accent hover:text-foreground transition-colors flex items-center gap-1">
                       View Client Story <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>

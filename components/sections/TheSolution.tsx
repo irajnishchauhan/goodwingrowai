@@ -105,11 +105,11 @@ export const TheSolution = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className="absolute -translate-x-1/2 -translate-y-1/2 bg-surface/80 backdrop-blur-md border border-white/10 px-4 py-2 rounded-lg text-sm font-medium text-secondary shadow-xl z-10"
+                    className="absolute -translate-x-1/2 -translate-y-1/2 bg-surface/80 backdrop-blur-md border border-foreground/10 px-4 py-2 rounded-lg text-sm font-medium text-secondary shadow-xl z-10"
                     style={{ left: x, top: y }}
                   >
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono text-white/30">{`0${stage.id}`}</span>
+                      <span className="text-[10px] font-mono text-foreground/30">{`0${stage.id}`}</span>
                       <span className="text-foreground">{stage.name}</span>
                     </div>
                   </motion.div>
